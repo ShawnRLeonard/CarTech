@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarTech - Auto Repair & Body Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: #09dcf8 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+        header #branding img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .current a {
+            color: #0abcf2;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px 0;
+            position: relative;
+        }
+        #showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #showcase .container {
+            position: relative;
+            z-index: 1;
+        }
+        #showcase p {
+            font-size: 24px;
+            text-align: left;
+            margin: -30;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        #boxes {
+            margin-top: 20px;
+        }
+        #boxes .box {
+            float: left;
+            text-align: center;
+            width: 33.3%;
+            padding: 10px;
+        }
+        #boxes .box img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+        #main {
+            margin-top: 20px;
+        }
+        #main-col {
+            float: left;
+            width: 65%;
+        }
+        #sidebar {
+            float: right;
+            width: 30%;
+            background: #35424a;
+            color: #ffffff;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .quote input, .quote textarea, .quote select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .quote button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #e8491d;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: #e8491d;
+            text-align: center;
+        }
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            #boxes .box,
+            #main-col,
+            #sidebar {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+            #showcase {
+                min-height: 300px;
+            }
+            #showcase p {
+                font-size: 18px;
+                max-width: 100%;
+            }
+            
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="images/logo.png" alt="Premier Auto Logo">
+                <h1>Auto Repair & Body Shop</h1>
+            </div> 
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase" style="background-image: url('images/20240731_165323.jpg');">
+        <div class="container">
+            <p>Trust your vehicle to our skilled technicians for all your repair and body shop needs.</p>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="images/20240429_140602.jpg" alt="Repair Services">
+                <h3>Repair Services & Diagnostics</h3>
+                <p>Comprehensive diagnostic and repair services for all makes and models</p>
+            </div>
+            <div class="box">
+                <img src="images/20240731_165125.jpg" alt="Body Work">
+                <h3>Paint & Body Work</h3>
+                <p>Expert collision repair and custom paint jobs to restore your vehicle's appearance</p>
+            </div>
+            <div class="box">
+                <img src="images/20210430_144212.jpg" alt="Quick Service">
+                <h3>Maintenance</h3>
+                <p>Efficient service for routine maintenance and minor repairs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1>Why Choose Us</h1>
+                <p>With over 40 years of experience, state-of-the-art equipment, and a team of certified technicians, we provide unmatched quality in auto repair and body work. Our commitment to customer satisfaction and transparent pricing sets us apart.</p>
+            </article>
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Book an Appointment</h3>
+                    <form class="quote">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <label>Service Type</label>
+                            <select>
+                                <option value="1">Repair</option>
+                                <option value="2">Body Work</option>
+                                <option value="3">Maintenance</option>
+                            </select>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>CarTech Auto Repair & Body Shop, Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>
