@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarTech - Auto Repair & Body Shop</title> 
@@ -140,21 +146,45 @@
             width: 33.3%;
             padding: 15px;
         }
-        #boxes .box img {
+        #boxes .box .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        #boxes .box .image-container img {
             width: 100%;
             height: auto;
             max-width: 100%;
+            transition: opacity 0.3s ease-in-out;
+        }
+        #boxes .box .image-container img.alternate {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        #boxes .box .image-container:hover img.main {
+            opacity: 0;
+        }
+        #boxes .box .image-container:hover img.alternate {
+            opacity: 1;
         }
         #main {
             margin-top: 20px;
         }
+        #main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         #main-col {
-            float: left;
-            width: 65%;
+            width: 35%;
+            text-align: center;
+            padding: 0 15px;
+            margin-top: 40px;
+            font-size: 22px;
         }
         #sidebar {
-            float: right;
-            width: 30%;
+            width: 28%;
             background: #35424a;
             color: #ffffff;
             padding: 15px;
@@ -169,7 +199,7 @@
             display: block;
             width: 100%;
             padding: 10px;
-            background: #e8491d;
+            background: #05b6fc;
             color: #ffffff;
             border: none;
             cursor: pointer;
@@ -178,27 +208,24 @@
             padding: 20px;
             margin-top: 20px;
             color: #ffffff;
-            background-color: #e8491d;
+            background-color: #05b6fc;
             text-align: center;
         }
         .map-container {
+            width: 27%;
             height: 300px;
-            width: 50%;
-            margin-top: 20px;
+            margin-right: 2%;
             border: 2px solid #333;
             border-radius: 8px;
             overflow: hidden;
         }
         @media(max-width: 768px) {
-            header #branding,
-            header nav,
-            header nav li,
-            #boxes .box,
+            .map-container,
             #main-col,
             #sidebar {
-                float: none;
-                text-align: center;
                 width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
             }
             header {
                 padding-bottom: 20px;
@@ -220,21 +247,16 @@
                 zoom: 15,
                 mapTypeControl: false
             });
-
             const marker = new google.maps.Marker({
                 map,
                 position: { lat: 35.9844742, lng: -86.5191823 },
             });
-
             const infowindow = new google.maps.InfoWindow({
                 content: '<strong>CarTech Automotive LLC</strong><br>207 Monroe Street, Smyrna, TN 37167'
             });
-
             infowindow.open(map, marker);
         }
-
         document.addEventListener('DOMContentLoaded', initMap);
-
         function submitForm() {
             alert('Form submitted!');
         }
@@ -277,17 +299,32 @@
     <section id="boxes">
         <div class="container">
             <div class="box">
-                <img src="images/20240429_140602.jpg" alt="Repair Services">
+                <a href="repair-services.html">
+                    <div class="image-container">
+                        <img src="images/20240429_140602.jpg" alt="Repair Services" class="main">
+                        <img src="Images/20230309_103440.jpg" alt="Alternate Repair Services" class="alternate">
+                    </div>
+                </a>
                 <h3>Repair Services & Diagnostics</h3>
-                <p>Comprehensive diagnostic and repair services for all makes and models</p>
+                <p>Comprehensive diagnostic and repair services for all makes and models. It's not speculation; it's science. We diagnose, repair, and restore vehicles with precision and care, ensuring you get the most value for your money.</p>
             </div>
             <div class="box">
-                <img src="images/20240731_165125.jpg" alt="Body Work">
+                <a href="body-work.html">
+                    <div class="image-container">
+                        <img src="images/20240731_165125.jpg" alt="Body Work" class="main">
+                        <img src="Images/20240731_165206.jpg" alt="Alternate Body Work" class="alternate">
+                    </div>
+                </a>
                 <h3>Paint & Body Work</h3>
                 <p>Expert collision repair and custom paint jobs to restore your vehicle's appearance</p>
             </div>
             <div class="box">
-                <img src="images/20210430_144212.jpg" alt="Quick Service">
+                <a href="maintenance.html">
+                    <div class="image-container">
+                        <img src="images/20210430_144212.jpg" alt="Quick Service" class="main">
+                        <img src="Images/20240208_130246.jpg" alt="Alternate Quick Service" class="alternate">
+                    </div>
+                </a>
                 <h3>Maintenance</h3>
                 <p>Efficient service for routine maintenance and minor repairs</p>
             </div>
@@ -295,12 +332,12 @@
     </section>
     <section id="main">
         <div class="container">
+            <div class="map-container">    
+                <div id="map" style="height: 100%; width: 100%;"></div>
+            </div>    
             <article id="main-col">
                 <h1>Why Choose Us</h1>
                 <p>With over 40 years of experience, state-of-the-art equipment, and a team of certified technicians, we provide unmatched quality in auto repair and body work. Our commitment to customer satisfaction and transparent pricing sets us apart.</p>
-                <div class="map-container">
-                    <div id="map" style="height: 100%; width: 100%;"></div>
-                </div>
             </article>
             <aside id="sidebar">
                 <div class="dark">
