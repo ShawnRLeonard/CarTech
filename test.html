@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Google Map</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 35.9844742, lng: -86.5191823 },
+                zoom: 15,
+                mapTypeControl: false
+            });
+
+            const locations = [
+                {
+                    position: { lat: 35.9844742, lng: -86.5191823 },
+                    title: 'CarTech Automotive LLC',
+                    content: '<strong>CarTech Automotive LLC</strong><br>207 Monroe Street, Smyrna, TN 37167<br><a href="https://www.google.com/maps/place/Cartech+Automotive+LLC/@35.9844742,-86.5217572,17z/data=!3m1!4b1!4m6!3m5!1s0x88640d63acd22139:0xffdf10410ff1cae8!8m2!3d35.9844742!4d-86.5191823!16s%2Fg%2F11jn2bj0p9?entry=ttu" target="_blank">Click to view on Google Maps</a>'
+                },
+                // Add more locations here if needed
+            ];
+
+            const infowindow = new google.maps.InfoWindow();
+
+            locations.forEach((location) => {
+                const marker = new google.maps.Marker({
+                    position: location.position,
+                    map: map,
+                    title: location.title
+                });
+
+                marker.addListener('click', () => {
+                    infowindow.setContent(location.content);
+                    infowindow.open(map, marker);
+                });
+            });
+
+            // Close infowindow when clicking on the map
+            map.addListener('click', () => {
+                infowindow.close();
+            });
+        }
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9a8wEvXRTS_xGSWuHkoWMhdZ146X_OHA&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

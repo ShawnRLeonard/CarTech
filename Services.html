@@ -19,11 +19,28 @@
             margin: 0;
             padding: 0;
         }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+        .content-wrapper {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main {
+            flex: 1 0 auto;
+        }
+
         .container {
             width: 96%;
             margin: auto;
@@ -280,7 +297,16 @@
             background-color: #f4f4f4;
             border-radius: 5px;
         }
+        footer {
+        flex-shrink: 0;
+        padding: 20px;
+        margin-top: 20px;
+        color: #ffffff;
+        background-color: #05b6fc;
+        text-align: center;
+    }
 
+        
         .service-list h3 {
             color: #05b6fc;
             margin-bottom: 10px;
@@ -293,6 +319,7 @@
     </script>
 </head>
 <body>
+<div class="content-wrapper">
     <div class="contact-info">
         <p> Auto Repair & Body Shop | <a href="https://www.google.com/maps/place/Cartech+Automotive+LLC/@35.9844742,-86.5217572,17z/data=!3m1!4b1!4m6!3m5!1s0x88640d63acd22139:0xffdf10410ff1cae8!8m2!3d35.9844742!4d-86.5191823!16s%2Fg%2F11jn2bj0p9?entry=ttu">207 Monroe Street, Smyrna, TN 37167</a>  | Call: <a href="tel:+16152206114">615-220-6114</a> / Text: <a href="sms:+16152206114">615-220-6114</a></p>
     </div>
@@ -345,13 +372,13 @@
                     <p>Our expert mechanics can handle everything from minor tune-ups to complete engine rebuilds, ensuring your engine performs at its best.</p>
                 </li>
                 <li>
-                    <h3>Transmission Service</h3>
-                    <p>We provide comprehensive transmission services, including repairs, rebuilds, and replacements for both automatic and manual transmissions.</p>
+                    <h3></h3>
+                    <p></p>
                 </li>
             </ul>
         </div>
     </section>
-
+</div>
     <footer>
         <p>CarTech Auto Repair & Body Shop, Copyright &copy; 2024</p>
     </footer>

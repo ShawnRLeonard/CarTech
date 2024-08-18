@@ -207,6 +207,7 @@
             cursor: pointer;
         }
         footer {
+            flex-shrink: 0;
             padding: 20px;
             margin-top: 20px;
             color: #ffffff;
@@ -254,8 +255,11 @@
                 position: { lat: 35.9844742, lng: -86.5191823 },
             });
             const infowindow = new google.maps.InfoWindow({
-                content: '<strong>CarTech Automotive LLC</strong><br>207 Monroe Street, Smyrna, TN 37167'
+                content: '<strong>CarTech Automotive LLC</strong><br>207 Monroe Street, Smyrna, TN 37167<br><a href="https://www.google.com/maps/place/Cartech+Automotive+LLC/@35.9844742,-86.5217572,17z/data=!3m1!4b1!4m6!3m5!1s0x88640d63acd22139:0xffdf10410ff1cae8!8m2!3d35.9844742!4d-86.5191823!16s%2Fg%2F11jn2bj0p9?entry=ttu">Click to view on Google maps'
             });
+            marker.addListener('click', () => {
+            infowindow.open(map, marker);
+        });
             infowindow.open(map, marker);
         }
         document.addEventListener('DOMContentLoaded', initMap);
@@ -301,7 +305,7 @@
     <section id="boxes">
         <div class="container">
             <div class="box">
-                <a href="repair-services.html">
+                <a href="services.html">
                     <div class="image-container">
                         <img src="Images/20240429_140602.jpg" alt="Repair Services" class="main">
                         <img src="Images/20230309_103440.jpg" alt="Alternate Repair Services" class="alternate">
@@ -311,7 +315,7 @@
                 <p>Comprehensive diagnostic and repair services for all makes and models. It's not speculation; it's science. We diagnose, repair, and restore vehicles with precision and care, ensuring you get the most value for your money.</p>
             </div>
             <div class="box">
-                <a href="body-work.html">
+                <a href="services.html">
                     <div class="image-container">
                         <img src="Images/20240731_165125.jpg" alt="Body Work" class="main">
                         <img src="Images/20240731_165206.jpg" alt="Alternate Body Work" class="alternate">
@@ -321,7 +325,7 @@
                 <p>Expert collision repair and custom paint jobs to restore your vehicle's appearance</p>
             </div>
             <div class="box">
-                <a href="maintenance.html">
+                <a href="services.html">
                     <div class="image-container">
                         <img src="Images/20210430_144212.jpg" alt="Quick Service" class="main">
                         <img src="Images/20240208_130246.jpg" alt="Alternate Quick Service" class="alternate">
