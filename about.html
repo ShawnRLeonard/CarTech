@@ -8,7 +8,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1124">
+    
     
     <title>CarTech - About Us</title> 
     <style>
@@ -35,7 +35,10 @@
         }
         .contact-info p {
             margin: 0;
-            font-size: 17px;
+            font-size: clamp(31px, 2vw, 25px);
+            line-height: 1.5;
+            
+
         }
         .contact-info a {
             color: #05b6fc;
@@ -147,6 +150,9 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            display: flex; 
+            justify-content: center;
+            flex-wrap: wrap;   
         }
         .team-member {
             text-align: center;
@@ -163,7 +169,7 @@
             text-align: center;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom:  15px;
         }
     </style>
 </head>
@@ -222,12 +228,12 @@
                     <img src="Images/Scott.jpg" alt="John Doe">
                     <h3>Scott Leonard</h3>
                     <p>Shop Manager</p>
-                    <p>Scott is the best dad ever</p>
+                    
                 </div>
                 <div class="team-member">
-                    <img src="Images/ducky.png" alt="Mike Johnson">
+                    <img src="Images/Emmanuel.jpg" alt="Mike Johnson">
                     <h3>Emmanuel Salazar</h3>
-                    <p>Co owner / Body Technician</p>
+                    <p>Co Owner / Body Technician</p>
                 </div>    
                 <div class="team-member">
                     <img src="Images/Ruben.jpg" alt="Ruben Salazar">
