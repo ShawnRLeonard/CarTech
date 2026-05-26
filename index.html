@@ -2,16 +2,57 @@
 <html lang="en">
 <head>
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-    <link rel="icon" type="image.png" sizes="32x32" href="Images/favicon-32x32.png">
-    <link rel="icon" type="image.png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   
-    
-    <title>CarTech - Auto Repair & Body Shop</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarTech Automotive offers expert auto repair, paint & body work, and maintenance in Smyrna, TN. Over 40 years experience. Call or text 615-220-6114.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CarTech Auto Repair & Body Shop | Smyrna, TN">
+    <meta property="og:description" content="Expert auto repair, paint & body work, and maintenance in Smyrna, TN. Honest pricing, certified technicians. Call 615-220-6114.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/logo.png">
+    <title>CarTech Auto Repair & Body Shop | Smyrna, TN | 615-220-6114</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "CarTech Automotive LLC",
+      "image": "Images/logo.png",
+      "description": "Family-owned auto repair and body shop in Smyrna, TN. Expert repair services, paint & body work, diagnostics, and maintenance for all makes and models.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "207 Monroe Street",
+        "addressLocality": "Smyrna",
+        "addressRegion": "TN",
+        "postalCode": "37167",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.9844742,
+        "longitude": -86.5191823
+      },
+      "telephone": "+16152206114",
+      "email": "cartechautomotivellc@gmail.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:30"
+        }
+      ],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/cartechautomotivellc",
+        "https://www.instagram.com/cartechautomotivellc"
+      ]
+    }
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -229,7 +270,71 @@
             border-radius: 8px;
             overflow: hidden;
         }
-        @media(max-width: 768px) {
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 5px 10px;
+            color: #050505;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+                align-self: flex-end;
+            }
+            header .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #branding {
+                float: none;
+                justify-content: center;
+            }
+            header #branding img {
+                width: 220px;
+                height: auto;
+            }
+            header #branding h1 {
+                font-size: 20px;
+                height: auto;
+                margin-top: 0;
+            }
+            header nav {
+                float: none;
+                margin-top: 0;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            header nav.open {
+                display: flex;
+            }
+            header nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            header li {
+                float: none;
+                padding: 10px 25px;
+                width: 100%;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+                margin: 8px 0;
+            }
+            .contact-info p {
+                font-size: 14px;
+                padding: 0 10px;
+                line-height: 1.8;
+            }
             .map-container,
             #main-col,
             #sidebar {
@@ -237,8 +342,12 @@
                 margin-right: 0;
                 margin-bottom: 20px;
             }
-            header {
-                padding-bottom: 20px;
+            #main .container {
+                flex-direction: column;
+            }
+            #boxes .box {
+                width: 100%;
+                float: none;
             }
             #showcase {
                 min-height: 300px;
@@ -284,7 +393,8 @@
             <div id="branding">
                 <img src="Images/logo.png" alt="CarTech Logo">
                 <h1><br>Auto Repair & Body Shop</h1> 
-            </div> 
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
             <nav>
                 <div class="social-links">
                     <a href="https://www.facebook.com/cartechautomotivellc" class="social-icon facebook">
@@ -385,5 +495,10 @@
     <footer>
         <p>CarTech Auto Repair & Body Shop, Copyright &copy; 2024</p>
     </footer>
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('header nav').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-    <link rel="icon" type="image.png" sizes="32x32" href="Images/favicon-32x32.png">
-    <link rel="icon" type="image.png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
-    
-    
-    <title>CarTech - About Us</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarTech Automotive is a family-owned auto repair and body shop in Smyrna, TN. Certified technicians, honest pricing, and state-of-the-art equipment since 2020.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About CarTech Automotive | Auto Repair in Smyrna, TN">
+    <meta property="og:description" content="Family-owned and operated auto repair shop in Smyrna, TN. Meet our certified technicians and learn about our commitment to quality and honest pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/logo.png">
+    <title>About CarTech Automotive | Auto Repair & Body Shop | Smyrna, TN</title>
     <style>
         * {
             box-sizing: border-box;
@@ -35,7 +40,7 @@
         }
         .contact-info p {
             margin: 0;
-            font-size: clamp(31px, 2vw, 25px);
+            font-size: clamp(14px, 2.5vw, 25px);
             line-height: 1.5;
             
 
@@ -158,8 +163,9 @@
             text-align: center;
         }
         .team-member img {
-            width: 500px;
-            height: 500px;
+            width: min(500px, 100%);
+            height: auto;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -170,6 +176,83 @@
         }
         p {
             margin-bottom:  15px;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 5px 10px;
+            color: #050505;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+                align-self: flex-end;
+            }
+            header .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #branding {
+                float: none;
+                justify-content: center;
+            }
+            header #branding img {
+                width: 220px;
+                height: auto;
+            }
+            header #branding h1 {
+                font-size: 20px;
+                height: auto;
+                margin-top: 0;
+            }
+            header nav {
+                float: none;
+                margin-top: 0;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            header nav.open {
+                display: flex;
+            }
+            header nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            header li {
+                float: none;
+                padding: 10px 25px;
+                width: 100%;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+                margin: 8px 0;
+            }
+            .contact-info p {
+                font-size: 14px;
+                padding: 0 10px;
+                line-height: 1.8;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            .about-image {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -182,7 +265,8 @@
             <div id="branding">
                 <img src="Images/logo.png" alt="CarTech Logo">
                 <h1><br>Auto Repair & Body Shop</h1> 
-            </div> 
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
             <nav>
                 <div class="social-links">
                     <a href="https://www.facebook.com/cartechautomotivellc" class="social-icon facebook">
@@ -252,5 +336,10 @@
     <footer>
         <p>CarTech Auto Repair & Body Shop, Copyright &copy; 2024</p>
     </footer>
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('header nav').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

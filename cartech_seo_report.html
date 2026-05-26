@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarTech Website Report – May 2026</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 11.5px;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 36px 44px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      border-bottom: 3px solid #c0392b;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header h1 { font-size: 20px; font-weight: 700; color: #c0392b; }
+    .header .sub { font-size: 11px; color: #555; margin-top: 2px; }
+    .header .date { font-size: 10.5px; color: #888; text-align: right; line-height: 1.5; }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      background: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 8px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p { line-height: 1.55; margin-bottom: 7px; color: #333; font-size: 11px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+    th {
+      background: #2c3e50;
+      color: #fff;
+      text-align: left;
+      padding: 5px 8px;
+      font-weight: 700;
+      font-size: 10.5px;
+    }
+    td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    tr:nth-child(even) td { background: #f9f9f9; }
+
+    .badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .high   { background: #fde8e8; color: #c0392b; }
+    .medium { background: #fef3cd; color: #856404; }
+    .low    { background: #e8f5e9; color: #2e7d32; }
+    .ok     { background: #e3f2fd; color: #1565c0; }
+    .warn   { background: #fff3e0; color: #e65100; }
+
+    /* two-column layout for checklist sections */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+
+    .checklist { list-style: none; margin-bottom: 8px; }
+    .checklist li {
+      padding: 4px 6px 4px 20px;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+      line-height: 1.4;
+      font-size: 11px;
+    }
+    .checklist li::before { content: "☐"; position: absolute; left: 4px; color: #aaa; font-size: 11px; }
+    .checklist li strong { color: #1a1a1a; }
+    .checklist li .note { color: #777; font-size: 10px; display: block; }
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 8px 0;
+    }
+    .cost-card { border: 1px solid #ddd; border-radius: 3px; overflow: hidden; font-size: 11px; }
+    .cost-card .card-head { padding: 5px 10px; font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .cost-card.agency .card-head { background: #fde8e8; color: #c0392b; }
+    .cost-card.inhouse .card-head { background: #e8f5e9; color: #2e7d32; }
+    .cost-card .card-body { padding: 7px 10px; line-height: 1.75; }
+
+    .savings-row {
+      display: flex;
+      gap: 10px;
+      margin: 8px 0;
+    }
+    .savings-box {
+      flex: 1;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 6px 10px;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .savings-box.green { border-color: #2e7d32; background: #f1f8e9; }
+    .savings-box.red   { border-color: #c0392b; background: #fdecea; }
+
+    .callout {
+      background: #f8f8f8;
+      border-left: 3px solid #c0392b;
+      padding: 8px 12px;
+      margin: 8px 0;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .zeely-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+    .pro-con { font-size: 11px; line-height: 1.65; }
+    .pro-con li { list-style: none; padding-left: 16px; position: relative; }
+    .pro-con.pros li::before { content: "✓"; position: absolute; left: 0; color: #2e7d32; font-weight: 700; }
+    .pro-con.cons li::before { content: "✗"; position: absolute; left: 0; color: #c0392b; font-weight: 700; }
+
+    .footer {
+      margin-top: 16px;
+      padding-top: 8px;
+      border-top: 1px solid #ddd;
+      font-size: 10px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    @media print {
+      body { padding: 24px 32px; }
+      .page-break { page-break-before: always; }
+      h2 { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <h1>CarTech Automotive LLC — Website &amp; SEO Report</h1>
+      <div class="sub">cartechsmyrna.com &nbsp;|&nbsp; Evaluation, Transition Checklist &amp; Cost Case</div>
+    </div>
+    <div class="date">Prepared: May 2026<br>207 Monroe St, Smyrna, TN</div>
+  </div>
+
+  <!-- Overview -->
+  <h2>Overview</h2>
+  <p>The CarTech website runs on <strong>GoHighLevel</strong> and looks presentable, but is missing critical SEO
+  elements that directly affect placement in Google's <strong>Map Pack</strong> — the top local results customers
+  click when searching "auto repair Smyrna TN" or "car repair near me." Every day these items are unfixed is a day
+  competitors with better-configured sites rank higher and get that call instead.</p>
+
+  <!-- SEO Status Table -->
+  <h2>SEO Audit — cartechsmyrna.com (Live Site)</h2>
+
+  <table>
+    <tr>
+      <th style="width:34%">Element</th>
+      <th style="width:13%">Status</th>
+      <th>Why It Matters</th>
+    </tr>
+    <tr>
+      <td>Title tag</td>
+      <td><span class="badge ok">Good</span></td>
+      <td>Includes "Smyrna TN" + service keywords. Solid.</td>
+    </tr>
+    <tr>
+      <td>Meta description</td>
+      <td><span class="badge ok">Good</span></td>
+      <td>Present and location-targeted. Shows under site name in Google results.</td>
+    </tr>
+    <tr>
+      <td>Open Graph tags (social)</td>
+      <td><span class="badge ok">Good</span></td>
+      <td>Controls appearance when site is shared on Facebook/social media.</td>
+    </tr>
+    <tr>
+      <td><strong>JSON-LD Business Schema</strong></td>
+      <td><span class="badge high">MISSING ★</span></td>
+      <td><strong>Highest priority.</strong> Tells Google your exact name, address, phone, hours, and business type. Without it Google guesses — and competitors with it rank above you in the map pack.</td>
+    </tr>
+    <tr>
+      <td>Google Analytics 4</td>
+      <td><span class="badge high">MISSING</span></td>
+      <td>No visitor tracking on the site at all. We have zero data on traffic, where customers come from, or what's working.</td>
+    </tr>
+    <tr>
+      <td>Canonical tag</td>
+      <td><span class="badge medium">Missing</span></td>
+      <td>Without it Google may treat "www." and non-"www." as competing pages and split the ranking signal.</td>
+    </tr>
+    <tr>
+      <td>Meta robots tag</td>
+      <td><span class="badge medium">Missing</span></td>
+      <td>Should explicitly tell Google to index and follow the site.</td>
+    </tr>
+    <tr>
+      <td>Google Search Console</td>
+      <td><span class="badge warn">Unknown</span></td>
+      <td>Unclear if site has been submitted. Without it, we can't see indexing errors or submit a sitemap.</td>
+    </tr>
+    <tr>
+      <td>Google Business Profile</td>
+      <td><span class="badge warn">Unknown</span></td>
+      <td>Most direct driver of calls and directions. Unclear if current team is actively managing it (photos, reviews, posts).</td>
+    </tr>
+    <tr>
+      <td>Favicon</td>
+      <td><span class="badge medium">Generic</span></td>
+      <td>Shows GoHighLevel's icon in browser tabs, not the CarTech brand.</td>
+    </tr>
+    <tr>
+      <td>Mobile zoom / accessibility</td>
+      <td><span class="badge medium">Issue</span></td>
+      <td>Site blocks users from zooming on mobile (<code>user-scalable=no</code>). Google penalizes this in accessibility scoring.</td>
+    </tr>
+    <tr>
+      <td>Keyword typos in metadata</td>
+      <td><span class="badge low">Minor</span></td>
+      <td>"Collison repair" (misspelled) and "care maintenance" appear in the site's hidden metadata.</td>
+    </tr>
+  </table>
+
+  <!-- Transition Checklist -->
+  <div class="page-break"></div>
+  <h2>What to Request from the Marketing Team Before Parting Ways</h2>
+  <p style="margin-bottom:8px;">Do not cancel any service until every item below is confirmed in hand. Losing access to the domain is the worst-case scenario — prioritize that first.</p>
+
+  <div class="two-col">
+    <div>
+      <strong style="font-size:10.5px; text-transform:uppercase; letter-spacing:0.5px; color:#2c3e50;">Account Access</strong>
+      <ul class="checklist" style="margin-top:4px;">
+        <li>
+          <strong>Domain registrar login</strong> — who registered cartechsmyrna.com and where (GoDaddy, Namecheap, etc.)? Need full login or a transfer.
+          <span class="note">Ask: "Did you register our domain, or do we own it?"</span>
+        </li>
+        <li>
+          <strong>GoHighLevel sub-account login</strong> — credentials or transfer to our own GHL account.
+          <span class="note">Ask: "Is CarTech under your agency account or our own?"</span>
+        </li>
+        <li>
+          <strong>DNS access</strong> — login to wherever DNS records are managed (often same as registrar or Cloudflare).
+        </li>
+      </ul>
+
+      <strong style="font-size:10.5px; text-transform:uppercase; letter-spacing:0.5px; color:#2c3e50; display:block; margin-top:10px;">Google Properties</strong>
+      <ul class="checklist" style="margin-top:4px;">
+        <li>
+          <strong>Google Business Profile — Owner access</strong>
+          <span class="note">Ask them to add wrongway611@gmail.com as an Owner (not just Manager).</span>
+        </li>
+        <li>
+          <strong>Google Search Console</strong> — add our Google account as owner, or confirm it's not set up.
+        </li>
+        <li>
+          <strong>Google Analytics</strong> — GA4 Measurement ID (G-XXXXXXX) + admin access, or confirm it was never set up.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <strong style="font-size:10.5px; text-transform:uppercase; letter-spacing:0.5px; color:#2c3e50;">Social Media &amp; Ads</strong>
+      <ul class="checklist" style="margin-top:4px;">
+        <li>
+          <strong>Facebook Page admin access</strong> — confirm our account is listed as Admin on the CarTech Business Page.
+        </li>
+        <li>
+          <strong>Facebook Pixel &amp; Ad Account</strong> — a Pixel is active on the site. Need Pixel ID + access to the ad account it belongs to.
+        </li>
+        <li>
+          <strong>Instagram admin access</strong> — confirm login or admin role.
+        </li>
+        <li>
+          <strong>Active paid ad campaigns</strong> — get a summary of any live Google or Facebook ads, budgets, and pause/transfer before exit.
+        </li>
+      </ul>
+
+      <strong style="font-size:10.5px; text-transform:uppercase; letter-spacing:0.5px; color:#2c3e50; display:block; margin-top:10px;">Files &amp; Content</strong>
+      <ul class="checklist" style="margin-top:4px;">
+        <li>
+          <strong>All original image and logo files</strong> — high-resolution versions of every asset used on the site.
+        </li>
+        <li>
+          <strong>Brand kit</strong> — hex color codes, fonts, logo usage guidelines (if they created one).
+        </li>
+        <li>
+          <strong>GHL automations list</strong> — any auto-reply texts, email sequences, or lead workflows currently running.
+        </li>
+        <li>
+          <strong>Is GHL being used beyond the website?</strong> — Are there active CRM contacts, lead pipelines, appointment booking, or automated texts/emails set up? If GHL is only being used as a website host, we may be able to cancel the subscription entirely (~$97–$297/mo) and move to a free platform.
+          <span class="note">Ask: "Other than the website, what features of GoHighLevel are actively being used for CarTech?"</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- In-House Case -->
+  <h2>Why In-House Management Costs Less &amp; Performs Better</h2>
+
+  <div class="cost-grid">
+    <div class="cost-card agency">
+      <div class="card-head">Outside Marketing Agency</div>
+      <div class="card-body">
+        ✗ $500–$1,500/mo retainer typical for small business SEO<br>
+        ✗ Doesn't know the shop, team, or services firsthand<br>
+        ✗ Generic content that doesn't reflect CarTech's real voice<br>
+        ✗ Changes take days or weeks to implement<br>
+        ✗ You depend on them to access your own website<br>
+        ✗ Contract lock-in; hard to exit quickly<br>
+        ✗ Hard to verify what work was actually done
+      </div>
+    </div>
+    <div class="cost-card inhouse">
+      <div class="card-head">In-House — Shawn + AI Tools</div>
+      <div class="card-body">
+        ✓ Zero added cost — Shawn is already on payroll<br>
+        ✓ Knows every service, price, and team member firsthand<br>
+        ✓ Real photos, real voice, real credibility in the content<br>
+        ✓ Changes made same day, sometimes same hour<br>
+        ✓ Full ownership of all accounts and assets<br>
+        ✓ No contract — total flexibility<br>
+        ✓ AI tools (Claude) audit the site live and generate code in minutes
+      </div>
+    </div>
+  </div>
+
+  <div class="savings-row">
+    <div class="savings-box red">
+      <strong>Agency cost (conservative):</strong> $600/mo &nbsp;= &nbsp;<strong>$7,200/year</strong><br>
+      <span style="font-size:10px; color:#888;">* Actual savings depend on what the current team charges. Ask for an itemized invoice.</span>
+    </div>
+    <div class="savings-box green">
+      <strong>In-house cost:</strong> $0 additional/mo &nbsp;= &nbsp;<strong>$0/year</strong><br>
+      <span style="font-size:10px; color:#555;">Shawn's time on this is a fraction of a normal workweek — no new hire needed.</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>What "AI-assisted" means in practice:</strong> Using Claude AI, we can audit the live site in minutes, write and test structured data code, fix technical SEO issues, generate content, and produce reports like this one — work an agency bills hours for. The AI accelerates Shawn's work; Shawn provides the shop knowledge and final judgment no outside team can replicate.
+  </div>
+
+  <h2>Why GoHighLevel May Be Unnecessary — We Already Have Tekmetric</h2>
+  <p>GoHighLevel (GHL) is marketed as an all-in-one CRM and marketing platform. However, CarTech already uses <strong>Tekmetric</strong> as its shop management system — which covers the most valuable features GHL offers a repair shop. This means we are likely paying for significant overlap.</p>
+
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>GHL</th>
+      <th>Tekmetric</th>
+      <th>In-House</th>
+    </tr>
+    <tr>
+      <td>Customer &amp; vehicle records</td>
+      <td>—</td>
+      <td><span class="badge ok">Handled</span></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Appointment &amp; job scheduling</td>
+      <td>—</td>
+      <td><span class="badge ok">Handled</span></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Automated customer texts &amp; updates</td>
+      <td>—</td>
+      <td><span class="badge ok">Handled</span></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Invoicing &amp; estimates</td>
+      <td>—</td>
+      <td><span class="badge ok">Handled</span></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Social media posts</td>
+      <td>—</td>
+      <td>—</td>
+      <td><span class="badge ok">Handled</span></td>
+    </tr>
+    <tr>
+      <td>Website hosting</td>
+      <td><span class="badge high">$97–$297/mo</span></td>
+      <td>—</td>
+      <td><span class="badge ok">Free (Netlify)</span></td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>Bottom line:</strong> If GHL has no active CRM contacts or lead automations running (which we will verify once we have login access), the platform is serving only as a website host — a job that can be done for free on Netlify with a custom domain. Moving to a hand-coded site would also give us direct control over every SEO element and eliminate the ~50 third-party scripts GHL loads on every page, improving load speed. The one item to confirm before canceling: whether the site's contact form routes leads into GHL. If so, that is a 10-minute fix to replace before shutting it down.
+  </div>
+
+  <!-- Zeely Section -->
+  <h2>A Note on Zeely (AI-Powered Organic Growth App)</h2>
+
+  <p>Zeely is a mobile app marketed to small businesses for creating AI-generated social media content, ads, and brand materials quickly. Here is an honest take on whether it fits CarTech:</p>
+
+  <div class="zeely-grid" style="margin-bottom:8px;">
+    <div>
+      <strong style="font-size:10.5px;">Where Zeely Helps</strong>
+      <ul class="pro-con pros" style="margin-top:4px;">
+        <li>Fast social media post generation — good for keeping Facebook/Instagram active without spending hours on design</li>
+        <li>Non-designers can produce decent-looking graphics quickly</li>
+        <li>AI ad copy suggestions for boosting posts or running simple campaigns</li>
+        <li>Lower cost than hiring a social media manager ($20–$40/mo range)</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="font-size:10.5px;">Where Zeely Falls Short</strong>
+      <ul class="pro-con cons" style="margin-top:4px;">
+        <li>Does <strong>nothing</strong> for technical SEO or Google search rankings</li>
+        <li>Generic AI content — still needs Shawn's edits to sound like CarTech, not a template</li>
+        <li>No website editing, no structured data, no Google tools integration</li>
+        <li>Another subscription to manage; not a replacement for the work outlined in this report</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Verdict:</strong> Zeely is a decent helper for social media content if CarTech wants to post more consistently on Facebook and Instagram without spending much time on it. It is <em>not</em> an SEO tool and won't move the needle on Google search rankings or the map pack. Use it as a supplement — not a strategy. The technical fixes in this report come first.
+  </div>
+
+  <!-- Next Steps -->
+  <h2>Recommended Next Steps (In Order)</h2>
+  <ul class="checklist">
+    <li><strong>Get ownership approval</strong> to transition website management in-house. <span class="note">This report is the supporting case.</span></li>
+    <li><strong>Collect all credentials and files</strong> from the current team before ending the relationship. <span class="note">Domain registrar first — everything else second.</span></li>
+    <li><strong>Add JSON-LD structured data</strong> to the site — the single highest-impact SEO fix. <span class="note">Ready to implement immediately once GHL access is confirmed.</span></li>
+    <li><strong>Set up Google Analytics 4</strong> and connect it so we have traffic data going forward.</li>
+    <li><strong>Submit to Google Search Console</strong> and upload a sitemap.</li>
+    <li><strong>Audit and update Google Business Profile</strong> — recent photos, accurate hours, respond to reviews.</li>
+  </ul>
+
+  <div class="footer">
+    CarTech Automotive LLC &nbsp;|&nbsp; 207 Monroe Street, Smyrna, TN 37167 &nbsp;|&nbsp; 615-220-6114 &nbsp;|&nbsp; cartechsmyrna.com &nbsp;|&nbsp; Report prepared May 2026
+  </div>
+
+</body>
+</html>
