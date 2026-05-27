@@ -566,6 +566,34 @@ footer {
     opacity: 0.8;
 }
 
+/* ── Language toggle button ── */
+.lang-toggle {
+    background: transparent;
+    border: 2px solid #05b6fc;
+    color: #05b6fc;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 16px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    align-self: center;
+}
+.lang-toggle:hover {
+    background: #05b6fc;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .lang-toggle {
+        margin: 6px 0 4px;
+        align-self: auto;
+    }
+}
+
 /* ── About snippet (homepage) ── */
 .about-snippet {
     background: #111111;
