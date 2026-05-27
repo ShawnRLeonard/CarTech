@@ -113,14 +113,111 @@ header a:hover {
     transform: scale(1.2);
 }
 
+/* ── CTA Banner ── */
+.cta-banner {
+    background: #0a0a0a;
+    padding: 60px 20px;
+    text-align: center;
+}
+.cta-banner h2 {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.cta-banner-btn {
+    display: inline-block;
+    background: #05b6fc;
+    color: #ffffff;
+    padding: 18px 48px;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+}
+.cta-banner-btn:hover {
+    background: #0495d1;
+    transform: translateY(-2px);
+}
+
 /* ── Footer ── */
 footer {
-    flex-shrink: 0;
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #05b6fc;
+    background: #0a0a0a;
+    color: #aaaaaa;
+    padding: 60px 0 0;
+    font-size: 15px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.5fr;
+    gap: 40px;
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.footer-col h4 {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #05b6fc;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+}
+.footer-col p,
+.footer-col address {
+    font-style: normal;
+    line-height: 1.9;
+    color: #aaaaaa;
+}
+.footer-col a {
+    color: #aaaaaa;
+    text-decoration: none;
+    display: block;
+    line-height: 2;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: #05b6fc;
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+.footer-tagline {
+    color: #aaaaaa;
+    line-height: 1.7;
+    font-size: 14px;
+}
+.footer-bottom {
+    border-top: 1px solid #222;
     text-align: center;
+    padding: 18px 0;
+    font-size: 13px;
+    color: #555;
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ── Mobile nav toggle ── */

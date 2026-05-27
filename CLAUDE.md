@@ -5,7 +5,7 @@
 - **Address:** 207 Monroe Street, Smyrna, TN 37167
 - **Phone/Text:** 615-220-6114
 - **Email:** cartechautomotivellc@gmail.com
-- **Hours:** Mon–Fri 8:00 AM – 5:30 PM, closed weekends
+- **Hours:** Mon–Fri 8:00 AM – 5:00 PM, closed weekends
 - **Founded:** 2020; dedicated paint & body shop added 2024
 - **Facebook:** facebook.com/cartechautomotivellc
 - **Instagram:** instagram.com/cartechautomotivellc
