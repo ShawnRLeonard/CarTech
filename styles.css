@@ -566,6 +566,24 @@ footer {
     opacity: 0.8;
 }
 
+/* ── Bilingual badge (about page) ── */
+.about-bilingual-badge {
+    display: inline-block;
+    background: #05b6fc;
+    color: #ffffff;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.about-bilingual-badge span {
+    color: #ffffff;
+}
+
 /* ── Language toggle button ── */
 .lang-toggle {
     background: transparent;
