@@ -497,3 +497,71 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Service Areas section ── */
+.service-areas-section {
+    background: #0d0d0d;
+    padding: 60px 0;
+    border-top: 1px solid #1a1a1a;
+}
+.service-areas-section h2 {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: clamp(22px, 3vw, 34px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+.service-areas-section .areas-intro {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 15px;
+    max-width: 640px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+}
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px 16px;
+    max-width: 960px;
+    margin: 0 auto 28px;
+}
+.areas-grid span {
+    color: #888888;
+    font-size: 13px;
+    padding: 4px 0;
+    border-left: 2px solid #1e1e1e;
+    padding-left: 10px;
+    transition: color 0.2s;
+}
+.areas-grid span:hover {
+    color: #05b6fc;
+}
+.areas-county-note {
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    margin-top: 8px;
+}
+@media (max-width: 900px) {
+    .areas-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 600px) {
+    .areas-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 400px) {
+    .areas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Footer tagline precision line ── */
+.footer-precision {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #05b6fc;
+    margin-top: 10px;
+    opacity: 0.8;
+}
