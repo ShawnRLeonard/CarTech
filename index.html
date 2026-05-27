@@ -134,37 +134,108 @@
             font-weight: bold;
         }
         #boxes {
-            margin-top: 20px;
+            background: #111111;
+            padding: 70px 0;
         }
-        
-        #boxes .box {
-            float: left;
+        #boxes h2 {
             text-align: center;
-            width: 33.3%;
-            padding: 15px;
+            color: #ffffff;
+            font-size: clamp(24px, 3vw, 38px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
         }
-        #boxes .box .image-container {
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            border-top: 3px solid #05b6fc;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+        }
+        .service-card-img {
             position: relative;
             overflow: hidden;
         }
-        #boxes .box .image-container img {
+        .service-card-img img {
             width: 100%;
-            height: 220px;
-            max-width: 100%;
+            height: 240px;
             object-fit: cover;
-            transition: opacity 0.3s ease-in-out;
+            display: block;
+            transition: transform 0.4s ease, opacity 0.3s ease-in-out;
         }
-        #boxes .box .image-container img.alternate {
+        .service-card:hover .service-card-img img.main {
+            transform: scale(1.06);
+            opacity: 0;
+        }
+        .service-card-img img.alternate {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             opacity: 0;
+            transform: scale(1);
         }
-        #boxes .box .image-container:hover img.main {
-            opacity: 0;
-        }
-        #boxes .box .image-container:hover img.alternate {
+        .service-card:hover .service-card-img img.alternate {
             opacity: 1;
+            transform: scale(1.06);
+        }
+        .service-card-body {
+            padding: 22px 24px 26px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card-body h3 {
+            color: #05b6fc;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .service-card-body p {
+            color: #aaaaaa;
+            font-size: 14px;
+            line-height: 1.75;
+            flex: 1;
+            margin: 0;
+        }
+        .service-card-cta {
+            display: inline-block;
+            color: #ffffff;
+            background: #05b6fc;
+            font-family: 'Oswald', 'Impact', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 8px 16px;
+            border-radius: 3px;
+            margin-top: 18px;
+            align-self: flex-start;
+            transition: background 0.2s;
+        }
+        .service-card:hover .service-card-cta {
+            background: #0495d1;
+        }
+        .services-view-all {
+            text-align: center;
+            margin-top: 44px;
+        }
+        @media (max-width: 900px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 580px) {
+            .services-grid { grid-template-columns: 1fr; }
         }
         #why-us {
             background: #111111;
@@ -254,8 +325,8 @@
     <header>
         <div class="container">
             <div id="branding">
-                <img src="Images/logo.png" alt="CarTech Logo">
-                <h1><br>Auto Repair & Body Shop</h1> 
+                <img src="Images/logo-gradient.png" alt="CarTech Logo">
+                <h1><br>Auto Repair & Body Shop</h1>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
             <nav>
@@ -291,36 +362,44 @@
     </section>
     <section id="boxes">
         <div class="container">
-            <H1><center>Click to learn more about our services </center></H1>
-            <div class="box">
-                <a href="Services.html">
-                    <div class="image-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
                         <img src="Images/20240429_185117.jpg" alt="Repair Services" class="main">
                         <img src="Images/20230309_103440.jpg" alt="Alternate Repair Services" class="alternate">
                     </div>
+                    <div class="service-card-body">
+                        <h3>Repair Services &amp; Diagnostics</h3>
+                        <p>Engine repair, AC &amp; heat, check engine lights, and precise diagnostics for all makes and models.</p>
+                        <span class="service-card-cta">Learn More</span>
+                    </div>
                 </a>
-                <h3>Repair Services & Diagnostics</h3>
-                
-            </div>
-            <div class="box">
-                <a href="Services.html">
-                    <div class="image-container">
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
                         <img src="Images/20240731_165125.jpg" alt="Body Work" class="main">
                         <img src="Images/20240731_165206.jpg" alt="Alternate Body Work" class="alternate">
                     </div>
-                </a>
-                <h3>Paint & Body Work</h3>
-                
-            </div>
-            <div class="box">
-                <a href="Services.html">
-                    <div class="image-container">
-                        <img src="Images/20210430_144212.jpg" alt="Quick Service" class="main">
-                        <img src="Images/20240208_130246.jpg" alt="Alternate Quick Service" class="alternate">
+                    <div class="service-card-body">
+                        <h3>Paint &amp; Body Work</h3>
+                        <p>Collision repair, dent removal, and custom paint with state-of-the-art color matching technology.</p>
+                        <span class="service-card-cta">Learn More</span>
                     </div>
                 </a>
-                <h3>Maintenance</h3>
-                
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
+                        <img src="Images/20210430_144212.jpg" alt="Maintenance" class="main">
+                        <img src="Images/20240208_130246.jpg" alt="Alternate Maintenance" class="alternate">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Maintenance</h3>
+                        <p>Oil changes, brakes, tire rotations, and routine care to keep your vehicle running its best.</p>
+                        <span class="service-card-cta">Learn More</span>
+                    </div>
+                </a>
+            </div>
+            <div class="services-view-all">
+                <a href="Services.html" class="cta-banner-btn" style="font-size:17px; padding:14px 44px;">View All Services</a>
             </div>
         </div>
     </section>
@@ -351,8 +430,13 @@
             </div>
         </div>
     </section>
-    <br><script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-23c3cdf3-a5fa-4b49-a79e-6d3fb5e66527" data-elfsight-app-lazy></div>
+    <section class="reviews-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-23c3cdf3-a5fa-4b49-a79e-6d3fb5e66527" data-elfsight-app-lazy></div>
+        </div>
+    </section>
 
     <section class="cta-banner">
         <h2>What Are You Waiting For?<br>Call or Text Us Today.</h2>
@@ -361,7 +445,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <img src="Images/logo.png" alt="CarTech Automotive Logo" class="footer-logo">
+                <img src="Images/logo-gradient.png" alt="CarTech Automotive Logo" class="footer-logo">
                 <p class="footer-tagline">Family-owned auto repair &amp; body shop in Smyrna, TN. Built on integrity since 2020.</p>
             </div>
             <div class="footer-col">

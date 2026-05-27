@@ -60,19 +60,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background: #0d0d0d;
+        }
         .about-section {
-            padding: 50px 0;
-            background-color: #f4f4f4;
-        
+            padding: 70px 0;
+            background-color: #111111;
         }
         .about-content {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            gap: 40px;
         }
         .about-text {
             width: 60%;
-            padding-right: 30px;
+        }
+        .about-text p {
+            color: #aaaaaa;
+            margin-bottom: 18px;
+            line-height: 1.85;
+            font-size: 16px;
         }
         .about-image {
             width: 40%;
@@ -80,11 +88,12 @@
         .about-image img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 2px solid #1a1a1a;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
         }
         .team-section {
-            padding: 50px 0;
-            background-color: #f4f4f4;
+            padding: 70px 0;
+            background-color: #0d0d0d;
         }
         .team-grid {
             display: grid;
@@ -95,21 +104,44 @@
         }
         .team-member {
             text-align: center;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            border-top: 3px solid #05b6fc;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .team-member:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .team-member img {
             width: 100%;
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            margin-bottom: 15px;
+            display: block;
+        }
+        .team-member h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 18px 16px 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .team-member p {
+            color: #05b6fc;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 16px 20px;
         }
         h2 {
-            color: #070707;
-            margin-bottom: 30px;
+            color: #ffffff;
+            margin-bottom: 40px;
             text-align: center;
-        }
-        p {
-            margin-bottom:  15px;
+            font-size: clamp(24px, 3vw, 38px);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         @media (max-width: 768px) {
             .about-content {
@@ -117,7 +149,6 @@
             }
             .about-text {
                 width: 100%;
-                padding-right: 0;
                 margin-bottom: 20px;
             }
             .about-image {
@@ -143,8 +174,8 @@
     <header>
         <div class="container">
             <div id="branding">
-                <img src="Images/logo.png" alt="CarTech Logo">
-                <h1><br>Auto Repair & Body Shop</h1> 
+                <img src="Images/logo-gradient.png" alt="CarTech Logo">
+                <h1><br>Auto Repair & Body Shop</h1>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
             <nav>
@@ -167,9 +198,14 @@
         </div>
     </header>
 
+    <section class="page-hero">
+        <h1>About CarTech</h1>
+        <p>Family-owned and built on integrity since 2020. We do the job right — no shortcuts, no guesswork.</p>
+    </section>
+
     <section class="about-section">
         <div class="container">
-            <h2>About CarTech Automotive</h2>
+            <h2>Our Story</h2>
             <div class="about-content">
                 <div class="about-text"> 
                     <p>Since CarTech Automotive was established in 2020, we've built our reputation on providing honest, reliable, and high-quality auto repair. We are committed to excellence, never compromising on quality. We ensure that every replacement part meets OEM standards and take the time to do the job right, without ever cutting corners. Your vehicle deserves nothing less than the best.</p>
@@ -220,7 +256,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <img src="Images/logo.png" alt="CarTech Automotive Logo" class="footer-logo">
+                <img src="Images/logo-gradient.png" alt="CarTech Automotive Logo" class="footer-logo">
                 <p class="footer-tagline">Family-owned auto repair &amp; body shop in Smyrna, TN. Built on integrity since 2020.</p>
             </div>
             <div class="footer-col">

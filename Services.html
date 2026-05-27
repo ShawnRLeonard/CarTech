@@ -67,28 +67,16 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #0d0d0d;
         }
         .content-wrapper {
             flex: 1 0 auto;
             display: flex;
             flex-direction: column;
         }
-        .container h1 {
-            text-align: center;
-            font-size: 40px;
-        }
-        .container p {
-            text-align: left;
-        }
-        .container h4 {
-            font-size: 19px;
-            text-align: center;
-            margin-bottom: 1%;
-            color: #333;
-        }
         #main {
             flex: 1 0 auto;
+            padding: 60px 0;
         }
         .service-list {
             list-style-type: none;
@@ -158,8 +146,8 @@
         <header>
             <div class="container">
                 <div id="branding">
-                    <img src="Images/logo.png" alt="CarTech Logo">
-                    <h1><br>Auto Repair & Body Shop</h1> 
+                    <img src="Images/logo-gradient.png" alt="CarTech Logo">
+                    <h1><br>Auto Repair & Body Shop</h1>
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
                 <nav>
@@ -182,13 +170,13 @@
             </div>
         </header>
 
+        <section class="page-hero">
+            <h1>Our Services</h1>
+            <p>From diagnostics and engine repair to paint &amp; body work and routine maintenance — we handle all makes and models with honest pricing and zero shortcuts.</p>
+        </section>
+
         <section id="main">
-            <div class="container"><br>
-                <h1>Our Services</h1><br>
-                <h4>At CarTech Auto Repair & Body Shop, we offer a comprehensive range of automotive services to keep your vehicle running smoothly and looking great. Our expert technicians are equipped to handle everything from routine maintenance to complex repairs and custom body work.
-                    <br>Schedule your service with us today!
-                </h4>
-                
+            <div class="container">
                 <ul class="service-list">
                     <li>
                         <img src="Images/service-transmission.webp" alt="Electrical diagnostics with laptop on engine" class="service-img" loading="lazy">
@@ -231,7 +219,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <img src="Images/logo.png" alt="CarTech Automotive Logo" class="footer-logo">
+                <img src="Images/logo-gradient.png" alt="CarTech Automotive Logo" class="footer-logo">
                 <p class="footer-tagline">Family-owned auto repair &amp; body shop in Smyrna, TN. Built on integrity since 2020.</p>
             </div>
             <div class="footer-col">
