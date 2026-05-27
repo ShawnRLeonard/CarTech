@@ -572,16 +572,17 @@ footer {
     border: 2px solid #05b6fc;
     color: #05b6fc;
     font-family: 'Oswald', 'Impact', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 2px;
-    padding: 6px 14px;
+    letter-spacing: 1px;
+    padding: 7px 14px;
     border-radius: 4px;
     cursor: pointer;
     margin-left: 16px;
     transition: background 0.2s, color 0.2s;
     white-space: nowrap;
     align-self: center;
+    text-transform: uppercase;
 }
 .lang-toggle:hover {
     background: #05b6fc;

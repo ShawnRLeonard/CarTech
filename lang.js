@@ -168,7 +168,7 @@
             }
         });
         document.querySelectorAll('.lang-label').forEach(function (lbl) {
-            lbl.textContent = lang === 'es' ? 'EN' : 'ES';
+            lbl.textContent = lang === 'es' ? 'Click for English' : 'Haz clic para Español';
         });
         try { localStorage.setItem('ct-lang', lang); } catch (e) {}
         document.documentElement.lang = lang === 'es' ? 'es' : 'en';
