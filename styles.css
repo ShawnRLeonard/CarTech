@@ -565,3 +565,64 @@ footer {
     margin-top: 10px;
     opacity: 0.8;
 }
+
+/* ── About snippet (homepage) ── */
+.about-snippet {
+    background: #111111;
+    padding: 70px 0;
+}
+.about-snippet-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+.about-snippet-text h2 {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.about-snippet-text p {
+    color: #aaaaaa;
+    line-height: 1.85;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+.about-snippet-link {
+    display: inline-block;
+    color: #05b6fc;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-bottom: 2px solid #05b6fc;
+    padding-bottom: 2px;
+    margin-top: 8px;
+    transition: color 0.2s, border-color 0.2s;
+}
+.about-snippet-link:hover {
+    color: #0495d1;
+    border-color: #0495d1;
+}
+.about-snippet-img img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    display: block;
+}
+@media (max-width: 768px) {
+    .about-snippet-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .about-snippet-img {
+        order: -1;
+    }
+}
