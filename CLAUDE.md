@@ -21,6 +21,11 @@
 - SEO improvements have been made to all 4 local HTML files (meta descriptions, title tags, Open Graph tags, meta robots). These are NOT yet live — they exist only in the local/repo files.
 - The live GHL site is missing: JSON-LD structured data (highest priority), Google Analytics 4, canonical tag, meta robots, branded favicon.
 - A printed report (`cartech_seo_report.html`) was created for shop ownership making the case to drop the marketing team and manage in-house.
+- ✅ GA4 (G-ZD0BHVK5JM), JSON-LD structured data, and canonical tags added to all 4 HTML pages.
+- ✅ Services page rebuilt with photo card grid layout; 8 service images added.
+- ✅ Background video hero added to homepage (`cartechdriveby.mp4`).
+- ✅ Shared `styles.css` created; mobile sticky Call/Text bar added to all pages.
+- ✅ Google Maps API key restricted to cartechsmyrna.com + Maps JavaScript API + Places API (done in Google Cloud Console, May 27 2026).
 
 ## What We Decided
 1. **Drop the current marketing team** — they were paid but left key SEO items undone (no GA4, no JSON-LD, typos in metadata).
@@ -34,8 +39,8 @@
 - [ ] Audit GHL — check for active CRM contacts, automations, and whether the contact form routes leads into GHL
 - [ ] Get Google Business Profile owner access (add wrongway611@gmail.com as Owner)
 - [ ] Get Google Search Console access or set up fresh
-- [ ] Set up Google Analytics 4
-- [ ] Add JSON-LD structured data to the site
+- [x] Set up Google Analytics 4
+- [x] Add JSON-LD structured data to the site
 - [ ] Move live site from GHL to GitHub Pages
 - [ ] Set up custom domain on GitHub Pages (point cartechsmyrna.com DNS)
 
