@@ -110,6 +110,39 @@
     - Each page: 200–300 words, specific models listed, JSON-LD, CTA, link back to Services.html
 12. **sitemap.xml** — create and submit to Google Search Console once live. Should list all pages including the Spanish page and any future make-specific pages.
 13. **Google Reviews widget** — currently pulls live reviews via Maps API. Need to confirm API key works on the live cartechsmyrna.com domain (currently restricted to that domain, so it should work once DNS is switched).
+14. **Google Search Console setup** (do day 1 of going live):
+    - Go to search.google.com/search-console → Add property → Domain type → cartechsmyrna.com
+    - Verify ownership via DNS TXT record (add it in the domain registrar)
+    - Submit sitemap: cartechsmyrna.com/sitemap.xml
+    - Use URL Inspection tool to manually request indexing of: taller-mecanico-smyrna-tn.html, faq.html (new pages Google hasn't seen)
+    - Check back after 30/60/90 days to see ranking progress
+
+## Keywords to Track in Google Search Console (after going live)
+These are the searches we're targeting — check monthly to see position improving:
+
+**English — Auto Repair:**
+- auto repair Smyrna TN
+- car repair Smyrna TN
+- mechanic Smyrna TN
+- body shop Smyrna TN
+- auto body shop Smyrna TN
+- oil change Smyrna TN
+- check engine light Smyrna TN
+- CarTech Automotive (branded)
+
+**English — Make-Specific (once those pages are built):**
+- Nissan repair Smyrna TN
+- Toyota repair Smyrna TN
+- Subaru repair Smyrna TN
+
+**Spanish:**
+- taller mecánico Smyrna TN
+- reparación de autos Smyrna
+- carrocería Smyrna Tennessee
+- mecánico Smyrna hablamos español
+- taller mecánico Murfreesboro TN
+
+**Signs it's working:** Moving from page 2–3 into page 1 (positions 1–10) for any of the above. Getting impressions on the Spanish page in Search Console means Google indexed it.
 
 ## Things to Request from the Marketing Team
 - **Domain registrar login** ← most critical, do this first
