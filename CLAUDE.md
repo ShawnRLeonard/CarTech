@@ -86,7 +86,14 @@
    - Add 4 A records pointing to GitHub's IPs: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
    - Add CNAME record: www → yourusername.github.io
    - In GitHub Pages settings, set custom domain to cartechsmyrna.com and enable HTTPS
-5. **Add Formspree contact form** — right now contact.html has no form (just call/text buttons). Formspree is free, works with static sites. Add a simple name/phone/message form that emails leads to cartechautomotivellc@gmail.com. Claude can build this in one session.
+5. **Activate Formspree contact form** — form is built and ready in contact.html AND taller-mecanico-smyrna-tn.html. Just needs a real form ID:
+    - Go to formspree.io → sign up free with cartechautomotivellc@gmail.com
+    - Click "New Form" → name it "CarTech Website"
+    - Copy the form ID (looks like: xpwzabc1)
+    - In contact.html: find `YOUR_FORM_ID` and replace with real ID
+    - In taller-mecanico-smyrna-tn.html: same replacement (same form ID works for both)
+    - Free tier = 50 submissions/month, email notifications to cartechautomotivellc@gmail.com
+    - Form fields: Name, Phone, Email (optional), Vehicle, Service dropdown, Message
 
 ### 🟢 DO AFTER GOING LIVE
 6. **Google Search Console** — verify cartechsmyrna.com ownership, submit sitemap, watch for indexing of Spanish page and FAQ page (these are the new pages Google hasn't seen yet)
