@@ -413,3 +413,87 @@ footer {
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
+
+/* ── Makes We Service section ── */
+.makes-section {
+    background: #0d0d0d;
+    padding: 70px 0 60px;
+}
+.makes-heading {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+.makes-intro {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 16px;
+    max-width: 720px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+}
+.makes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+.make-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    border-top: 3px solid #05b6fc;
+    padding: 20px 20px 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.make-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.make-card h3 {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+.make-card p {
+    color: #888888;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.makes-footer-note {
+    text-align: center;
+    color: #888888;
+    font-size: 15px;
+}
+.makes-footer-note strong {
+    color: #e0e0e0;
+}
+.makes-footer-note a {
+    color: #05b6fc;
+    text-decoration: none;
+}
+.makes-footer-note a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 1024px) {
+    .makes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .makes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 400px) {
+    .makes-grid {
+        grid-template-columns: 1fr;
+    }
+}
