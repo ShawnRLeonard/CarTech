@@ -288,6 +288,81 @@
         <a href="https://booking.shopgenie.io/?shop=cartech-automotive-1812547883&preselect_account=cartech-automotive-llc-1812548070&rwg_token=AFd1xnF4gZf0mW_9ep8v-Wpu4k-BpW-JRBx_VP8Ao8ESG94qCRVwYPsGVlh7xB_k6lYrRKm0aX_1yZD58hpGRh6MDN4SDAT9vQ%3D%3D" target="_blank" rel="noopener" class="cta-banner-btn" style="margin-top:28px; display:inline-block; font-size:18px;" data-i18n="schedule-btn">Schedule Appointment</a>
     </section>
 
+    <!-- ══ Contact Form ══════════════════════════════════════════════ -->
+    <!-- SETUP: Sign up free at formspree.io → New Form → copy the    -->
+    <!-- form ID (looks like xpwzabc1) and replace YOUR_FORM_ID below -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-section-head">
+                <h2 data-i18n="form-h2">Send Us a Message</h2>
+                <p data-i18n="form-sub">Fill out the form and we'll get back to you within one business day. Prefer to talk? <a href="tel:+16152206114" style="color:#05b6fc;">Call or text 615-220-6114.</a></p>
+            </div>
+            <div class="form-wrap">
+
+                <!-- Success state -->
+                <div class="form-success" id="form-success">
+                    <div class="form-success-icon">&#10003;</div>
+                    <h3 data-i18n="form-success-h3">Message Sent!</h3>
+                    <p data-i18n="form-success-p">Thanks for reaching out. We'll get back to you as soon as possible — usually same business day. If it's urgent, call or text us at <a href="tel:+16152206114" style="color:#05b6fc;">615-220-6114</a>.</p>
+                </div>
+
+                <!-- Form -->
+                <form id="contact-form"
+                      action="https://formspree.io/f/YOUR_FORM_ID"
+                      method="POST">
+
+                    <!-- Spam honeypot (hidden) -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="New Message — CarTech Automotive Website">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-name" data-i18n="form-label-name">Your Name <span class="form-required">*</span></label>
+                            <input type="text" id="cf-name" name="name" required placeholder="John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-phone" data-i18n="form-label-phone">Phone Number <span class="form-required">*</span></label>
+                            <input type="tel" id="cf-phone" name="phone" required placeholder="615-555-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-email" data-i18n="form-label-email">Email <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(optional)</span></label>
+                            <input type="email" id="cf-email" name="email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-vehicle" data-i18n="form-label-vehicle">Your Vehicle <span class="form-required">*</span></label>
+                            <input type="text" id="cf-vehicle" name="vehicle" required placeholder="e.g. 2019 Nissan Altima">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cf-service" data-i18n="form-label-service">Service Needed <span class="form-required">*</span></label>
+                        <select id="cf-service" name="service" required>
+                            <option value="" disabled selected data-i18n="form-select-default">Select a service...</option>
+                            <option data-i18n="form-opt-paint">Paint &amp; Body Work / Collision Repair</option>
+                            <option data-i18n="form-opt-repair">Repair &amp; Diagnostics</option>
+                            <option data-i18n="form-opt-maint">Maintenance (Oil Change, Brakes, etc.)</option>
+                            <option data-i18n="form-opt-engine">Engine Service</option>
+                            <option data-i18n="form-opt-trans">Transmission</option>
+                            <option data-i18n="form-opt-estimate">Free Estimate Only</option>
+                            <option data-i18n="form-opt-other">Other / Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cf-message" data-i18n="form-label-msg">Additional Details <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(optional)</span></label>
+                        <textarea id="cf-message" name="message" placeholder="Describe the problem or anything else we should know..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" data-i18n="form-submit">Send Message</button>
+                    <p class="form-note" data-i18n="form-note">We typically respond within a few hours during business hours (Mon–Fri 8AM–5PM).</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
@@ -449,6 +524,39 @@
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('header nav').classList.toggle('open');
         });
+
+        /* ── Contact form AJAX submit ── */
+        var form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var btn = form.querySelector('.form-submit-btn');
+                var origText = btn.textContent;
+                btn.textContent = 'Sending…';
+                btn.disabled = true;
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(function(res) {
+                    if (res.ok) {
+                        form.style.display = 'none';
+                        document.getElementById('form-success').style.display = 'block';
+                    } else {
+                        btn.textContent = origText;
+                        btn.disabled = false;
+                        alert('Something went wrong. Please call us at 615-220-6114 or try again.');
+                    }
+                })
+                .catch(function() {
+                    btn.textContent = origText;
+                    btn.disabled = false;
+                    alert('Something went wrong. Please call us at 615-220-6114 or try again.');
+                });
+            });
+        }
     </script>
 
     <div class="mobile-cta-bar">

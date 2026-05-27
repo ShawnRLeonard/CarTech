@@ -148,6 +148,28 @@
         'faq-q12': '&iquest;Sus t&eacute;cnicos est&aacute;n certificados?',
         'faq-a12': 'Nuestros t&eacute;cnicos est&aacute;n capacitados y son muy experimentados en todas las marcas y modelos. Utilizamos equipos de diagn&oacute;stico avanzados y piezas de calidad OEM en cada trabajo para asegurarnos de que su veh&iacute;culo sea reparado correctamente desde la primera vez &mdash; sin suposiciones.',
 
+        /* ===== CONTACT FORM ===== */
+        'form-h2':           'Env&iacute;enos un Mensaje',
+        'form-sub':          'Llene el formulario y le responderemos dentro de un d&iacute;a h&aacute;bil. &iquest;Prefiere hablar? <a href="tel:+16152206114" style="color:#05b6fc;">Llame o env&iacute;e un mensaje al 615-220-6114.</a>',
+        'form-label-name':   'Su Nombre <span class="form-required">*</span>',
+        'form-label-phone':  'N&uacute;mero de Tel&eacute;fono <span class="form-required">*</span>',
+        'form-label-email':  'Correo Electr&oacute;nico <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(opcional)</span>',
+        'form-label-vehicle':'Su Veh&iacute;culo <span class="form-required">*</span>',
+        'form-label-service':'Servicio Necesario <span class="form-required">*</span>',
+        'form-label-msg':    'Detalles Adicionales <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(opcional)</span>',
+        'form-select-default':'Seleccione un servicio...',
+        'form-opt-paint':    'Pintura y Carrocer&iacute;a / Reparaci&oacute;n de Colisi&oacute;n',
+        'form-opt-repair':   'Reparaci&oacute;n y Diagn&oacute;sticos',
+        'form-opt-maint':    'Mantenimiento (Cambio de Aceite, Frenos, etc.)',
+        'form-opt-engine':   'Servicio de Motor',
+        'form-opt-trans':    'Transmisi&oacute;n',
+        'form-opt-estimate': 'Solo Estimado Gratuito',
+        'form-opt-other':    'Otro / No Estoy Seguro',
+        'form-submit':       'Enviar Mensaje',
+        'form-note':         'Generalmente respondemos en pocas horas durante el horario de atenci&oacute;n (Lun&ndash;Vie 8AM&ndash;5PM).',
+        'form-success-h3':   '&iexcl;Mensaje Enviado!',
+        'form-success-p':    'Gracias por contactarnos. Le responderemos lo antes posible &mdash; generalmente el mismo d&iacute;a h&aacute;bil. Si es urgente, ll&aacute;menos o env&iacute;enos un mensaje al <a href="tel:+16152206114" style="color:#05b6fc;">615-220-6114</a>.',
+
         'faq-bottom-p':   '&iquest;A&uacute;n tiene preguntas? Con gusto le ayudamos.',
         'faq-bottom-btn': 'Llamar o Enviar Mensaje &mdash; 615-220-6114'
     };

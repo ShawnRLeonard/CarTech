@@ -505,6 +505,77 @@
         </div>
     </section>
 
+    <!-- Formulario de Contacto -->
+    <!-- SETUP: Same Formspree ID as contact.html — replace YOUR_FORM_ID -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-section-head">
+                <h2>Envíenos un Mensaje</h2>
+                <p>Llene el formulario y le responderemos dentro de un día hábil. ¿Prefiere hablar? <a href="tel:+16152206114" style="color:#05b6fc;">Llame o envíe un mensaje al 615-220-6114.</a></p>
+            </div>
+            <div class="form-wrap">
+
+                <div class="form-success" id="es-form-success">
+                    <div class="form-success-icon">&#10003;</div>
+                    <h3>¡Mensaje Enviado!</h3>
+                    <p>Gracias por contactarnos. Le responderemos lo antes posible — generalmente el mismo día hábil. Si es urgente, llámenos al <a href="tel:+16152206114" style="color:#05b6fc;">615-220-6114</a>.</p>
+                </div>
+
+                <form id="es-contact-form"
+                      action="https://formspree.io/f/YOUR_FORM_ID"
+                      method="POST">
+
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="Nuevo Mensaje — CarTech Automotive (Español)">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="es-name">Su Nombre <span class="form-required">*</span></label>
+                            <input type="text" id="es-name" name="name" required placeholder="Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="es-phone">Número de Teléfono <span class="form-required">*</span></label>
+                            <input type="tel" id="es-phone" name="phone" required placeholder="615-555-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="es-email">Correo Electrónico <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(opcional)</span></label>
+                            <input type="email" id="es-email" name="email" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="es-vehicle">Su Vehículo <span class="form-required">*</span></label>
+                            <input type="text" id="es-vehicle" name="vehicle" required placeholder="ej. 2019 Nissan Altima">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="es-service">Servicio Necesario <span class="form-required">*</span></label>
+                        <select id="es-service" name="service" required>
+                            <option value="" disabled selected>Seleccione un servicio...</option>
+                            <option>Pintura y Carrocería / Reparación de Colisión</option>
+                            <option>Reparación y Diagnósticos</option>
+                            <option>Mantenimiento (Cambio de Aceite, Frenos, etc.)</option>
+                            <option>Servicio de Motor</option>
+                            <option>Transmisión</option>
+                            <option>Solo Estimado Gratuito</option>
+                            <option>Otro / No Estoy Seguro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="es-message">Detalles Adicionales <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(opcional)</span></label>
+                        <textarea id="es-message" name="message" placeholder="Describa el problema o cualquier otra información que debamos saber..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Enviar Mensaje</button>
+                    <p class="form-note">Generalmente respondemos en pocas horas durante el horario de atención (Lun–Vie 8AM–5PM).</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Áreas de Servicio -->
     <section class="service-areas-section">
         <div class="container">
@@ -588,6 +659,39 @@
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('header nav').classList.toggle('open');
         });
+
+        /* ── Contact form AJAX submit ── */
+        var esForm = document.getElementById('es-contact-form');
+        if (esForm) {
+            esForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var btn = esForm.querySelector('.form-submit-btn');
+                var origText = btn.textContent;
+                btn.textContent = 'Enviando…';
+                btn.disabled = true;
+
+                fetch(esForm.action, {
+                    method: 'POST',
+                    body: new FormData(esForm),
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(function(res) {
+                    if (res.ok) {
+                        esForm.style.display = 'none';
+                        document.getElementById('es-form-success').style.display = 'block';
+                    } else {
+                        btn.textContent = origText;
+                        btn.disabled = false;
+                        alert('Algo salió mal. Por favor llámenos al 615-220-6114.');
+                    }
+                })
+                .catch(function() {
+                    btn.textContent = origText;
+                    btn.disabled = false;
+                    alert('Algo salió mal. Por favor llámenos al 615-220-6114.');
+                });
+            });
+        }
     </script>
 
     <div class="mobile-cta-bar">
