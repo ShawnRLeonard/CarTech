@@ -326,27 +326,36 @@ footer {
     line-height: 1;
 }
 
+/* ── Mobile Spanish link (hidden on desktop) ── */
+.lang-mobile-link {
+    display: none;
+}
+
 /* ── Mobile responsive ── */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
-        align-self: flex-end;
+        flex-shrink: 0;
     }
     header .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
+        padding: 6px 12px;
+        gap: 8px;
     }
     #branding {
         float: none;
-        justify-content: center;
+        flex: 1;
+        justify-content: flex-start;
     }
     header #branding img {
-        width: 220px;
+        width: 180px;
         height: auto;
     }
     header #branding h1 {
-        font-size: 20px;
+        font-size: 17px;
         height: auto;
         margin-top: 0;
     }
@@ -356,7 +365,7 @@ footer {
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        flex: 0 0 100%;
     }
     header nav.open {
         display: flex;
@@ -373,6 +382,10 @@ footer {
         width: 100%;
         text-align: center;
     }
+    /* Hide dropdown sub-items in hamburger menu */
+    .dropdown {
+        display: none !important;
+    }
     .social-links {
         justify-content: center;
         margin: 8px 0;
@@ -381,6 +394,27 @@ footer {
         font-size: 14px;
         padding: 0 10px;
         line-height: 1.8;
+    }
+    /* Mobile Spanish link visible in header bar */
+    .lang-mobile-link {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        color: #05b6fc;
+        border: 1.5px solid #05b6fc;
+        border-radius: 4px;
+        padding: 5px 9px;
+        font-size: 11px;
+        font-family: 'Oswald', 'Impact', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+    }
+    .lang-mobile-link:hover {
+        background: #05b6fc;
+        color: #ffffff;
     }
 }
 
