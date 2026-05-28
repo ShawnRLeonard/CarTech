@@ -1031,11 +1031,8 @@ footer {
 .service-card:hover .service-card-img img {
     transform: scale(1.06);
 }
-.service-card-img img.zoom-out {
-    transform: scale(0.82);
-}
-.service-card:hover .service-card-img img.zoom-out {
-    transform: scale(0.88);
+.service-card-img img.contain-img {
+    object-fit: contain;
 }
 .service-card-body {
     padding: 22px 24px 26px;
