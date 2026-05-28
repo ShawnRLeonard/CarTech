@@ -4,7 +4,14 @@
         /* --- Navigation --- */
         'nav-home':     'Inicio',
         'nav-services': 'Servicios',
+        'nav-paint':    'Pintura y Carrocer&iacute;a',
+        'nav-repair':   'Reparaci&oacute;n y Diagn&oacute;stico',
+        'nav-noise':    'Ruidos y Manejo',
+        'nav-maint':    'Mantenimiento',
+        'nav-engine':   'Servicio de Motor',
+        'nav-trans':    'Servicios de Transmisi&oacute;n',
         'nav-about':    'Nosotros',
+        'nav-story':    'Nuestra Historia',
         'nav-contact':  'Contacto',
         'nav-faq':      'Preguntas',
 

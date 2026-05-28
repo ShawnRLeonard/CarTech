@@ -553,6 +553,8 @@ footer {
     border-top: 3px solid #05b6fc;
     padding: 20px 20px 18px;
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    cursor: pointer;
 }
 .make-card:hover {
     transform: translateY(-3px);
@@ -598,6 +600,11 @@ footer {
     letter-spacing: 1px;
     text-decoration: none;
     transition: color 0.2s;
+}
+.make-card-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
 }
 .make-card-link:hover { color: #ffffff; }
 @media (max-width: 1024px) {
@@ -873,6 +880,7 @@ footer {
     font-weight: 700;
     letter-spacing: 1px;
     padding: 7px 14px;
+    cursor: pointer;
     border-radius: 4px;
     cursor: pointer;
     margin-left: 16px;
