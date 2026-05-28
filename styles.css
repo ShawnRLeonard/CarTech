@@ -1031,9 +1031,7 @@ footer {
 .service-card:hover .service-card-img img {
     transform: scale(1.06);
 }
-.service-card-img img.contain-img {
-    object-fit: contain;
-}
+
 .service-card-body {
     padding: 22px 24px 26px;
     flex: 1;
