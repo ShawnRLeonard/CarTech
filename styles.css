@@ -1026,20 +1026,9 @@ footer {
     height: 240px;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease, opacity 0.3s ease-in-out;
+    transition: transform 0.4s ease;
 }
-.service-card:hover .service-card-img img.main {
-    transform: scale(1.06);
-    opacity: 0;
-}
-.service-card-img img.alternate {
-    position: absolute;
-    top: 0; left: 0;
-    opacity: 0;
-    transform: scale(1);
-}
-.service-card:hover .service-card-img img.alternate {
-    opacity: 1;
+.service-card:hover .service-card-img img {
     transform: scale(1.06);
 }
 .service-card-body {
