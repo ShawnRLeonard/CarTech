@@ -360,7 +360,11 @@
         var btn = find('button.lang-toggle');
         if (btn) {
             btn.addEventListener('click', function () {
-                setLang(localStorage.getItem('ct-lang') === 'es' ? 'en' : 'es');
+                if (localStorage.getItem('ct-lang') === 'es') {
+                    setLang('en');
+                } else {
+                    window.location.href = 'taller-mecanico-smyrna-tn.html';
+                }
             });
         }
         // Apply on load if Spanish preference is set
