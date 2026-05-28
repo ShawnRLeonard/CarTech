@@ -83,15 +83,46 @@
 
         /* ── Spanish hero ── */
         .es-hero {
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-                        url('Images/shopfront.jpg') center center / cover no-repeat;
-            min-height: 60vh;
+            min-height: 85vh;
+            color: #ffffff;
+            position: relative;
+            z-index: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+        #es-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
+        }
+        .es-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+        .es-hero .container {
+            position: relative;
+            z-index: 2;
+            margin-top: auto;
+            margin-bottom: 5vh;
+        }
+        .es-hero .hero-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px 20px 40px;
             text-align: center;
-            padding: 60px 20px;
         }
         .es-hero h1 {
             font-family: 'Oswald', 'Impact', sans-serif;
@@ -208,6 +239,13 @@
         @media (max-width: 768px) {
             .es-about-inner { grid-template-columns: 1fr; gap: 32px; }
             .es-about-img { order: -1; }
+            .es-hero {
+                min-height: 50vh;
+                background: url('Images/shopfront.jpg') center center / cover no-repeat;
+            }
+            #es-video { display: none; }
+            .es-hero h1 { font-size: 28px; }
+            .es-hero .es-hero-sub { font-size: 15px; }
         }
 
         /* ── Services grid ── */
@@ -399,12 +437,19 @@
 
     <!-- Hero -->
     <section class="es-hero">
-        <h1>Tu Taller Mecánico<br>de Confianza en Smyrna, TN</h1>
-        <p class="es-hero-sub">&#127474;&#127485;&nbsp; Hablamos Español — Negocio Familiar con Raíces Mexicanas &nbsp;&#127474;&#127485;</p>
-        <div class="hero-btns">
-            <a href="https://booking.shopgenie.io/?shop=cartech-automotive-1812547883&preselect_account=cartech-automotive-llc-1812548070&rwg_token=AFd1xnF4gZf0mW_9ep8v-Wpu4k-BpW-JRBx_VP8Ao8ESG94qCRVwYPsGVlh7xB_k6lYrRKm0aX_1yZD58hpGRh6MDN4SDAT9vQ%3D%3D"
-               target="_blank" rel="noopener" class="hero-btn">Programar Cita</a>
-            <a href="tel:+16152206114" class="hero-btn-outline">Llamar — 615-220-6114</a>
+        <video id="es-video" autoplay muted playsinline poster="Images/shopfront.jpg">
+            <source src="Images/cartechdriveby.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tu Taller Mecánico<br>de Confianza en Smyrna, TN</h1>
+                <p class="es-hero-sub">&#127474;&#127485;&nbsp; Hablamos Español — Negocio Familiar con Raíces Mexicanas &nbsp;&#127474;&#127485;</p>
+                <div class="hero-btns">
+                    <a href="https://booking.shopgenie.io/?shop=cartech-automotive-1812547883&preselect_account=cartech-automotive-llc-1812548070&rwg_token=AFd1xnF4gZf0mW_9ep8v-Wpu4k-BpW-JRBx_VP8Ao8ESG94qCRVwYPsGVlh7xB_k6lYrRKm0aX_1yZD58hpGRh6MDN4SDAT9vQ%3D%3D"
+                       target="_blank" rel="noopener" class="hero-btn">Programar Cita</a>
+                    <a href="tel:+16152206114" class="hero-btn-outline">Llamar — 615-220-6114</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -674,6 +719,12 @@
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('header nav').classList.toggle('open');
         });
+        var esVid = document.getElementById('es-video');
+        if (esVid) {
+            esVid.addEventListener('ended', function() {
+                setTimeout(function() { esVid.play(); }, 8000);
+            });
+        }
 
         /* ── Contact form AJAX submit ── */
         var esForm = document.getElementById('es-contact-form');
