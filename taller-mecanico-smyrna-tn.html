@@ -161,34 +161,6 @@
             letter-spacing: 2px;
             margin-bottom: 50px;
         }
-        .es-why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        .es-why-item {
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 3px solid #05b6fc;
-            background: #1a1a1a;
-            border-radius: 4px;
-        }
-        .es-why-icon { font-size: 40px; margin-bottom: 14px; }
-        .es-why-item h3 {
-            color: #05b6fc;
-            font-family: 'Oswald', 'Impact', sans-serif;
-            font-size: 17px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .es-why-item p {
-            color: #aaaaaa;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-        @media (max-width: 900px) { .es-why-grid { grid-template-columns: repeat(2,1fr); } }
-        @media (max-width: 480px) { .es-why-grid { grid-template-columns: 1fr; } }
 
         /* ── About section ── */
         .es-about {
@@ -248,7 +220,7 @@
             .es-hero .es-hero-sub { font-size: 15px; }
         }
 
-        /* ── Services grid ── */
+        /* ── Services section ── */
         .es-services {
             background: #111111;
             padding: 70px 0;
@@ -262,33 +234,6 @@
             letter-spacing: 2px;
             margin-bottom: 48px;
         }
-        .es-svc-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .es-svc-card {
-            background: #1a1a1a;
-            border-radius: 8px;
-            border-top: 3px solid #05b6fc;
-            padding: 28px 24px;
-        }
-        .es-svc-card .es-svc-icon { font-size: 32px; margin-bottom: 12px; }
-        .es-svc-card h3 {
-            font-family: 'Oswald', 'Impact', sans-serif;
-            color: #05b6fc;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .es-svc-card p {
-            color: #aaaaaa;
-            font-size: 14px;
-            line-height: 1.75;
-        }
-        @media (max-width: 900px) { .es-svc-grid { grid-template-columns: repeat(2,1fr); } }
-        @media (max-width: 560px) { .es-svc-grid { grid-template-columns: 1fr; } }
 
         /* ── Makes strip ── */
         .es-makes {
@@ -454,73 +399,76 @@
         </div>
     </section>
 
-    <!-- ¿Por Qué Elegirnos? -->
-    <section class="es-why">
-        <div class="container">
-            <h2>¿Por Qué Elegir CarTech?</h2>
-            <div class="es-why-grid">
-                <div class="es-why-item">
-                    <div class="es-why-icon">&#127474;&#127485;</div>
-                    <h3>Hablamos Español</h3>
-                    <p>Los dueños son de origen mexicano y todo el equipo habla español con fluidez. Aquí no hay barreras de idioma — explíquenos el problema como usted desee.</p>
-                </div>
-                <div class="es-why-item">
-                    <div class="es-why-icon">&#127968;</div>
-                    <h3>Negocio Familiar</h3>
-                    <p>Somos un taller familiar — no una franquicia, no una cadena. Tratamos a cada cliente como vecino y trabajamos con honestidad en cada trabajo.</p>
-                </div>
-                <div class="es-why-item">
-                    <div class="es-why-icon">&#128295;</div>
-                    <h3>Más de 40 Años de Experiencia</h3>
-                    <p>Nuestro equipo combina décadas de experiencia en mecánica y pintura. Trabajamos en todas las marcas y modelos con herramientas de diagnóstico avanzadas.</p>
-                </div>
-                <div class="es-why-item">
-                    <div class="es-why-icon">&#9989;</div>
-                    <h3>Precios Honestos</h3>
-                    <p>Presupuestos claros, sin sorpresas. Le explicamos exactamente qué necesita su vehículo y cuánto costará antes de empezar cualquier trabajo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Nuestros Servicios -->
     <section class="es-services">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <div class="es-svc-grid">
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#127775;</div>
-                    <h3>Pintura</h3>
-                    <p>Reparación de colisiones, eliminación de abolladuras, rasguños y pintura personalizada con una cabina de última tecnología. Igualamos el color de su vehículo a la perfección.</p>
-                </div>
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#128295;</div>
-                    <h3>Reparación y Diagnósticos</h3>
-                    <p>Luces de motor, AC y calefacción, TPMS y luces del tablero. Usamos herramientas avanzadas para identificar el problema exacto desde la primera vez, sin suposiciones.</p>
-                </div>
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#128340;</div>
-                    <h3>Mantenimiento</h3>
-                    <p>Cambios de aceite, servicio de frenos, rotación de llantas y mantenimiento rutinario para mantener su vehículo en óptimas condiciones y evitar reparaciones costosas.</p>
-                </div>
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#9881;&#65039;</div>
-                    <h3>Servicio de Motor</h3>
-                    <p>Desde afinaciones hasta reparaciones mayores de motor. Nuestros mecánicos expertos se aseguran de que su motor funcione a su máximo rendimiento.</p>
-                </div>
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#128664;</div>
-                    <h3>Transmisión</h3>
-                    <p>Cambios de fluido de transmisión, reparaciones menores y reemplazos completos. Trabajamos en transmisiones automáticas y manuales de todas las marcas.</p>
-                </div>
-                <div class="es-svc-card">
-                    <div class="es-svc-icon">&#128266;</div>
-                    <h3>Ruido y estbilidad al manejar</h3>
-                    <p>¿Su vehículo hace ruidos extraños o vibra? Nuestros técnicos identifican con precisión la fuente del problema para garantizar una conducción suave y silenciosa.</p>
-                </div>
+            <div class="services-grid">
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
+                        <img src="Images/20240731_165125.jpg" alt="Pintura y reparación de carrocería en CarTech Automotive, Smyrna TN" class="main">
+                        <img src="Images/20240731_165206.jpg" alt="Trabajo de pintura en CarTech Automotive, Smyrna TN" class="alternate">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Pintura y Carrocería</h3>
+                        <p>Reparación de colisiones, eliminación de abolladuras y pintura personalizada con cabina de última tecnología. Igualamos el color de su vehículo a la perfección.</p>
+                        <span class="service-card-cta">Ver Más</span>
+                    </div>
+                </a>
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
+                        <img src="Images/20240429_185117.jpg" alt="Diagnósticos y reparación de autos en CarTech Automotive, Smyrna TN" class="main">
+                        <img src="Images/20230309_103440.jpg" alt="Servicio de reparación en CarTech Automotive, Smyrna TN" class="alternate">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Reparación y Diagnósticos</h3>
+                        <p>Reparación de motor, AC y calefacción, luces del tablero y diagnósticos precisos para todas las marcas y modelos.</p>
+                        <span class="service-card-cta">Ver Más</span>
+                    </div>
+                </a>
+                <a href="Services.html" class="service-card">
+                    <div class="service-card-img">
+                        <img src="Images/20210430_144212.jpg" alt="Mantenimiento de vehículos en CarTech Automotive, Smyrna TN" class="main">
+                        <img src="Images/20240208_130246.jpg" alt="Cambio de aceite y mantenimiento en CarTech Automotive, Smyrna TN" class="alternate">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Mantenimiento</h3>
+                        <p>Cambios de aceite, frenos, rotación de llantas y cuidado rutinario para mantener su vehículo en óptimas condiciones.</p>
+                        <span class="service-card-cta">Ver Más</span>
+                    </div>
+                </a>
             </div>
-            <div style="text-align:center; margin-top:40px;">
-                <a href="Services.html" class="cta-banner-btn" style="font-size:16px; padding:14px 44px;">Ver Todos los Servicios</a>
+            <div class="services-view-all">
+                <a href="Services.html" class="cta-banner-btn" style="font-size:17px; padding:14px 44px;">Ver Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Por Qué Elegirnos? -->
+    <section class="es-why">
+        <div class="container">
+            <h2>¿Por Qué Elegir CarTech?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">&#128295;</div>
+                    <h3>Más de 40 Años de Experiencia</h3>
+                    <p>Nuestro equipo combina décadas de experiencia en mecánica y pintura para todas las marcas y modelos.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">&#127968;</div>
+                    <h3>Negocio Familiar</h3>
+                    <p>Somos un taller familiar — no una franquicia, no una cadena. Tratamos a cada cliente como vecino.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">&#127474;&#127485;</div>
+                    <h3>Hablamos Español</h3>
+                    <p>Los dueños son de origen mexicano y todo el equipo habla español con fluidez. Sin barreras de idioma.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">&#9989;</div>
+                    <h3>Precios Honestos</h3>
+                    <p>Presupuestos claros, sin sorpresas. Le explicamos exactamente qué necesita su vehículo y cuánto costará.</p>
+                </div>
             </div>
         </div>
     </section>
