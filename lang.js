@@ -199,6 +199,18 @@
                 }
             }
         });
+        document.querySelectorAll('[data-es-src]').forEach(function (el) {
+            if (lang === 'es') {
+                if (!el.hasAttribute('data-orig-src')) {
+                    el.setAttribute('data-orig-src', el.getAttribute('src'));
+                }
+                el.setAttribute('src', el.getAttribute('data-es-src'));
+            } else {
+                if (el.hasAttribute('data-orig-src')) {
+                    el.setAttribute('src', el.getAttribute('data-orig-src'));
+                }
+            }
+        });
         document.querySelectorAll('[data-es]').forEach(function (el) {
             if (lang === 'es') {
                 if (!el.hasAttribute('data-orig')) {
