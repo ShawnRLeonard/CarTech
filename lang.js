@@ -46,8 +46,9 @@
         'svc-repair-p':  'Reparaci&oacute;n de motor, AC y calefacci&oacute;n, luces de motor y diagn&oacute;stico preciso para todas las marcas y modelos.',
         'svc-maint-h3':  'Mantenimiento',
         'svc-maint-p':   'Cambios de aceite, frenos, rotaci&oacute;n de llantas y mantenimiento rutinario para mantener su veh&iacute;culo en &oacute;ptimas condiciones.',
-        'svc-card-cta':  'Ver M&aacute;s',
-        'view-all-btn':  'Ver Todos los Servicios',
+        'svc-card-cta':   'Ver M&aacute;s',
+        'svc-learn-more': 'Ver M&aacute;s &rarr;',
+        'view-all-btn':   'Ver Todos los Servicios',
 
         'why-h2':        '&iquest;Por Qu&eacute; Elegir CarTech?',
         'why-exp-h3':    'M&aacute;s de 40 A&ntilde;os de Experiencia Combinada',
