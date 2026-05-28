@@ -199,6 +199,18 @@
                 }
             }
         });
+        document.querySelectorAll('[data-es]').forEach(function (el) {
+            if (lang === 'es') {
+                if (!el.hasAttribute('data-orig')) {
+                    el.setAttribute('data-orig', el.innerHTML);
+                }
+                el.innerHTML = el.getAttribute('data-es');
+            } else {
+                if (el.hasAttribute('data-orig')) {
+                    el.innerHTML = el.getAttribute('data-orig');
+                }
+            }
+        });
         document.querySelectorAll('.lang-label').forEach(function (lbl) {
             lbl.textContent = lang === 'es' ? 'Click for English' : 'Haz clic para Español';
         });
