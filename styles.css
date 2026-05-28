@@ -355,9 +355,7 @@ footer {
         height: auto;
     }
     header #branding h1 {
-        font-size: 17px;
-        height: auto;
-        margin-top: 0;
+        display: none;
     }
     header nav {
         float: none;
