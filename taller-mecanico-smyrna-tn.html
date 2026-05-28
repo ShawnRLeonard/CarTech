@@ -343,6 +343,7 @@
         gtag('js', new Date());
         gtag('config', 'G-ZD0BHVK5JM');
     </script>
+    <script>try{localStorage.setItem('ct-lang','es')}catch(e){}</script>
 </head>
 <body>
 
@@ -385,13 +386,13 @@
                     <li class="has-dropdown"><a href="about.html">Nosotros</a>
                         <ul class="dropdown">
                             <li><a href="about.html">Nuestra Historia</a></li>
-                            <li><a href="index.html">English Version</a></li>
+                            <li><a href="index.html" onclick="try{localStorage.setItem('ct-lang','en')}catch(e){}">English Version</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contacto</a></li>
                     <li><a href="faq.html">Preguntas</a></li>
                 </ul>
-                <a href="index.html" class="lang-toggle" style="text-decoration:none; display:inline-block;">English Version</a>
+                <a href="index.html" class="lang-toggle" onclick="try{localStorage.setItem('ct-lang','en')}catch(e){}" style="text-decoration:none; display:inline-block;">English Version</a>
             </nav>
         </div>
     </header>
@@ -630,7 +631,7 @@
     <!-- English version bar -->
     <div class="en-version-bar">
         <p>¿Prefiere ver el sitio en inglés?</p>
-        <a href="index.html" class="en-version-link">&#127468;&#127463;&nbsp; English Version</a>
+        <a href="index.html" class="en-version-link" onclick="try{localStorage.setItem('ct-lang','en')}catch(e){}">&#127468;&#127463;&nbsp; English Version</a>
     </div>
 
     <!-- Footer -->
