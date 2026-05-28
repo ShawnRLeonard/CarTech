@@ -27,8 +27,9 @@
         'footer-precision':  'Precisi&oacute;n. Rendimiento. Perfecci&oacute;n.',
         'footer-contact-h4': 'Cont&aacute;ctenos',
         'footer-hours':      'Lun &ndash; Vie: 8:00 AM &ndash; 5:00 PM<br>S&aacute;b &ndash; Dom: Cerrado',
-        'footer-browse-h4':  'Explorar Nuestro Sitio',
-        'footer-areas-h4':   '&Aacute;reas de Servicio',
+        'footer-browse-h4':    'Explorar Nuestro Sitio',
+        'footer-areas-h4':     '&Aacute;reas de Servicio',
+        'footer-services-h4':  'Nuestros Servicios',
 
         /* --- Service Areas (shared) --- */
         'areas-h2':     'Sirviendo Todo el Tennessee Medio',
