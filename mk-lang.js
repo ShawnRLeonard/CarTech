@@ -363,7 +363,7 @@
                 if (localStorage.getItem('ct-lang') === 'es') {
                     setLang('en');
                 } else {
-                    window.location.href = 'taller-mecanico-smyrna-tn.html';
+                    setLang('es');
                 }
             });
         }

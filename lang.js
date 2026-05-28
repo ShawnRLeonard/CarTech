@@ -234,7 +234,7 @@
         var current = 'en';
         try { current = localStorage.getItem('ct-lang') || 'en'; } catch (e) {}
         if (current === 'en') {
-            window.location.href = 'taller-mecanico-smyrna-tn.html';
+            applyLang('es');
         } else {
             applyLang('en');
         }
