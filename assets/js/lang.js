@@ -229,10 +229,19 @@
         document.querySelectorAll('.lang-label').forEach(function (lbl) {
             lbl.textContent = lang === 'es' ? 'Click for English' : 'Haz clic para Español';
         });
-        // Inicio always points to the Spanish homepage when in ES mode
+        // All "Home" links (nav + footer) point to Spanish homepage in ES mode
         document.querySelectorAll('a[data-i18n="nav-home"]').forEach(function (el) {
             el.href = lang === 'es' ? 'se-habla-espanol.html' : 'index.html';
         });
+        // Branding / logo link
+        var brandingEl = document.getElementById('branding');
+        if (brandingEl) brandingEl.href = lang === 'es' ? 'se-habla-espanol.html' : 'index.html';
+        // Mobile lang link — flip label and destination when already in Spanish
+        var mobileLangLink = document.querySelector('a.lang-mobile-link');
+        if (mobileLangLink) {
+            mobileLangLink.textContent = lang === 'es' ? 'English' : 'Español';
+            mobileLangLink.href = lang === 'es' ? 'index.html' : 'se-habla-espanol.html';
+        }
         try { localStorage.setItem('ct-lang', lang); } catch (e) {}
         document.documentElement.lang = lang === 'es' ? 'es' : 'en';
     }

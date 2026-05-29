@@ -170,6 +170,15 @@
         var homeNavLink = find('header nav ul > li:nth-child(1) > a');
         if (homeNavLink) homeNavLink.href = 'se-habla-espanol.html';
         setEl('header nav ul > li:nth-child(1) > a', SHARED.nav_home);
+        // Branding / logo link
+        var brandingEl = find('#branding');
+        if (brandingEl) brandingEl.href = 'se-habla-espanol.html';
+        // Footer home link href
+        var footerHomeLink = find('.footer-col:nth-child(3) ul li:first-child a');
+        if (footerHomeLink) footerHomeLink.href = 'se-habla-espanol.html';
+        // Mobile lang link — flip to English when already in Spanish
+        var mobileLangLink = find('a.lang-mobile-link');
+        if (mobileLangLink) { storeOrig(mobileLangLink); mobileLangLink.textContent = 'English'; mobileLangLink.href = 'index.html'; }
         setEl('header nav ul > li:nth-child(2) > a', SHARED.nav_services);
         setEl('header nav ul > li:nth-child(2) .dropdown li:nth-child(1) a', SHARED.nav_paint);
         setEl('header nav ul > li:nth-child(2) .dropdown li:nth-child(2) a', SHARED.nav_repair);
@@ -360,6 +369,12 @@
             restoreAll();
             var homeNavLink = find('header nav ul > li:nth-child(1) > a');
             if (homeNavLink) homeNavLink.href = 'index.html';
+            var brandingEl = find('#branding');
+            if (brandingEl) brandingEl.href = 'index.html';
+            var footerHomeLink = find('.footer-col:nth-child(3) ul li:first-child a');
+            if (footerHomeLink) footerHomeLink.href = 'index.html';
+            var mobileLangLink = find('a.lang-mobile-link');
+            if (mobileLangLink) mobileLangLink.href = 'se-habla-espanol.html';
             var btn = find('button.lang-toggle');
             if (btn) btn.textContent = 'HAZ CLIC PARA ESPAÑOL';
         }
