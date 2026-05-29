@@ -39,6 +39,9 @@
     // ─── Shared Spanish translations ────────────────────────────────────────
     var SHARED = {
 
+        // Header tagline (shown on every make page)
+        header_tagline:  '<br>Taller Mec&aacute;nico &amp; Pintura',
+
         // Nav
         nav_home:        'Inicio',
         nav_services:    'Servicios',
@@ -159,6 +162,9 @@
 
     // ─── Apply Spanish ───────────────────────────────────────────────────────
     function applySpanish() {
+
+        // Header tagline
+        setEl('header #branding h1', SHARED.header_tagline);
 
         // Nav
         setEl('header nav ul > li:nth-child(1) > a', SHARED.nav_home);

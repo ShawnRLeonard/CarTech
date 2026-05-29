@@ -59,6 +59,13 @@
 
   <!-- ── Service Sub-Pages ── -->
   <url>
+    <loc>https://cartechsmyrna.com/paint-body-gallery-smyrna-tn.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://cartechsmyrna.com/paint-body-work-smyrna-tn.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>

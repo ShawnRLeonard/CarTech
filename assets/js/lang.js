@@ -15,6 +15,9 @@
         'nav-contact':  'Contacto',
         'nav-faq':      'Preguntas',
 
+        /* --- Header tagline (shared) --- */
+        'header-tagline': '<br>Taller Mec&aacute;nico &amp; Pintura',
+
         /* --- Schedule button (shared) --- */
         'schedule-btn': 'Programar Cita',
 
@@ -99,7 +102,7 @@
         'about-p2': 'En 2024, maximizamos el uso de nuestro espacio con la adici&oacute;n de una secci&oacute;n de Pintura dedicada. Esta adici&oacute;n incluye una cabina de pintura de &uacute;ltima generaci&oacute;n, tecnolog&iacute;a avanzada de escaneo de c&oacute;digo de color y software integrado que garantiza una igualaci&oacute;n perfecta de color en cada ocasi&oacute;n. Con m&aacute;s de 65 opciones de colores automotrices de alta calidad disponibles en casa, estamos equipados para mezclar a la perfecci&oacute;n con cualquier color que necesite.',
         'about-p3': 'Nuestro equipo est&aacute; equipado con herramientas de diagn&oacute;stico avanzadas y equipos de alta calidad, lo que nos permite trabajar en todas las marcas y modelos de veh&iacute;culos. Nos enorgullece nuestro compromiso con la satisfacci&oacute;n del cliente y el mantenimiento de precios transparentes.',
         'about-p4': 'En CarTech, no solo reparamos autos &mdash; constru&iacute;mos relaciones duraderas con nuestros clientes. Ponemos a nuestros clientes primero, siempre. Somos un taller familiar constru&iacute;do sobre la integridad. Sabemos que su veh&iacute;culo es una parte crucial de su vida diaria, y estamos dedicados a mantenerlo funcionando sin problemas, de forma segura y con la mejor apariencia. &iexcl;Gracias por su negocio!',
-        'about-p5': 'Los co-propietarios Emmanuel y Ruben Salazar son de origen mexicano, y todo el equipo de CarTech habla espa&ntilde;ol con fluidez. No hay barrera de idioma aqu&iacute; &mdash; expl&iacute;quenos el problema en el idioma que le sea m&aacute;s c&oacute;modo y le explicaremos exactamente lo que necesita su veh&iacute;culo, en t&eacute;rminos claros, antes de tocar nada. Servimos a una comunidad biling&uuml;e y estamos orgullosos de ello. <a href="taller-mecanico-smyrna-tn.html" style="color:#05b6fc;">Ver esta p&aacute;gina en espa&ntilde;ol &rarr;</a>',
+        'about-p5': 'Los co-propietarios Emmanuel y Ruben Salazar son de origen mexicano, y todo el equipo de CarTech habla espa&ntilde;ol con fluidez. No hay barrera de idioma aqu&iacute; &mdash; expl&iacute;quenos el problema en el idioma que le sea m&aacute;s c&oacute;modo y le explicaremos exactamente lo que necesita su veh&iacute;culo, en t&eacute;rminos claros, antes de tocar nada. Servimos a una comunidad biling&uuml;e y estamos orgullosos de ello.',
 
         'team-h2':     'Conoce a Nuestro Equipo',
         'team1-title': 'Gerente del Taller',

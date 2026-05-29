@@ -899,8 +899,17 @@ footer {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 12px 24px;
+    border: none;
     border-radius: 4px;
     margin-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.about-bilingual-badge:hover {
+    background: #0495d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(5,182,252,0.25);
 }
 .about-bilingual-badge span {
     color: #ffffff;

@@ -9,11 +9,11 @@
     <meta property="og:title" content="Auto Repair Services | CarTech Automotive | Smyrna, TN">
     <meta property="og:description" content="From diagnostics and engine repair to paint & body work and maintenance, CarTech Automotive in Smyrna, TN handles all your automotive service needs.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cartechsmyrna.com/Images/shopfront.jpg">
+    <meta property="og:image" content="https://cartechsmyrna.com/assets/images/shop/shopfront.jpg">
     <title>Auto Repair & Body Shop Services | CarTech Automotive | Smyrna, TN</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -22,7 +22,7 @@
       "@context": "https://schema.org",
       "@type": "AutoRepair",
       "name": "CarTech Automotive LLC",
-      "image": "https://cartechsmyrna.com/Images/logo.png",
+      "image": "https://cartechsmyrna.com/assets/images/icons/logo.png",
       "url": "https://cartechsmyrna.com/Services.html",
       "description": "Family-owned auto repair and body shop in Smyrna, TN. Expert repair services, paint & body work, diagnostics, and maintenance for all makes and models.",
       "address": {
@@ -72,7 +72,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         html, body {
             height: 100%;
@@ -110,6 +110,8 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            position: relative;
+            cursor: pointer;
         }
         .service-list li:hover {
             transform: translateY(-3px);
@@ -160,18 +162,18 @@
         <header>
             <div class="container">
                 <div id="branding">
-                    <img src="Images/logo-gradient.png" alt="CarTech Automotive LLC – auto repair and body shop in Smyrna, TN">
-                    <h1><br>Auto Repair & Body Shop</h1>
+                    <img src="assets/images/icons/logo-gradient.png" alt="CarTech Automotive LLC – auto repair and body shop in Smyrna, TN">
+                    <h1 data-i18n="header-tagline"><br>Auto Repair & Body Shop</h1>
                 </div>
                 <a href="taller-mecanico-smyrna-tn.html" class="lang-mobile-link">Espa&ntilde;ol</a>
             <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
                 <nav>
                     <div class="social-links">
                         <a href="https://www.facebook.com/cartechautomotivellc" class="social-icon facebook">
-                            <img src="Images/Facebook_Logo_Primary.png" alt="CarTech Automotive on Facebook">
+                            <img src="assets/images/icons/facebook-logo.png" alt="CarTech Automotive on Facebook">
                         </a>
                         <a href="https://www.instagram.com//cartechautomotivellc" class="social-icon instagram">
-                            <img src="Images/Instagram_Glyph_Gradient.png" alt="CarTech Automotive on Instagram">
+                            <img src="assets/images/icons/instagram-glyph.png" alt="CarTech Automotive on Instagram">
                         </a>
                     </div>
                     <ul>
@@ -211,37 +213,37 @@
             <div class="container">
                 <ul class="service-list">
                     <li>
-                        <img src="Images/paint-booth-front.jpg" alt="Classic car in paint booth at CarTech Automotive in Smyrna, TN" class="service-img" loading="lazy">
+                        <img src="assets/images/shop/paint-booth-front.jpg" alt="Classic car in paint booth at CarTech Automotive in Smyrna, TN" class="service-img" loading="lazy">
                         <h3 data-i18n="svc1-h3">Paint & Body Work</h3>
                         <p data-i18n="svc1-p">From paint restoration, minor dents and scratches to major collision repair, our skilled automotive body technicians can restore your vehicle's appearance like new.</p>
                         <a href="paint-body-work-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
                     </li>
                     <li>
-                        <img src="Images/service-transmission.webp" alt="Electrical diagnostics with laptop on engine" class="service-img" loading="lazy">
+                        <img src="assets/images/services/service-transmission.webp" alt="Electrical diagnostics with laptop on engine" class="service-img" loading="lazy">
                         <h3 data-i18n="svc2-h3">Repair Services & Diagnostics</h3>
                         <p data-i18n="svc2-p">AC & Heat - Check Engine lights - All dash lights, including TPMS<br><br>Our advanced diagnostic tools and equipment along with highly trained technicians allows us to accurately identify issues with your vehicle. We don't rely on guesswork. Our process involves carefully identifying the exact issue the first time, using logic and precision. We provide repair services for all makes and models, ensuring your car is back on the road in top condition.</p>
                         <a href="repair-services-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
                     </li>
                     <li>
-                        <img src="Images/service-noise-drivability.webp" data-es-src="Images/spanishsuspention.png" alt="Noise and drivability diagnosis at CarTech Automotive in Smyrna, TN" class="service-img" loading="lazy">
+                        <img src="assets/images/services/service-noise-drivability.webp" data-es-src="assets/images/services/spanishsuspention.png" alt="Noise and drivability diagnosis at CarTech Automotive in Smyrna, TN" class="service-img" loading="lazy">
                         <h3 data-i18n="svc3-h3">Noise & Drivability</h3>
                         <p data-i18n="svc3-p">Our skilled technicians are experts at detecting and diagnosing any unwanted sounds or vibrations in your vehicle. From subtle squeaks to persistent clunks or vibrations, we accurately pinpoint the source of the problem to ensure a smooth, quiet ride.</p>
                         <a href="noise-drivability-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
                     </li>
                     <li>
-                        <img src="Images/service-engine.webp" alt="Mechanic holding wrenches for routine maintenance" class="service-img" loading="lazy">
+                        <img src="assets/images/services/service-engine.webp" alt="Mechanic holding wrenches for routine maintenance" class="service-img" loading="lazy">
                         <h3 data-i18n="svc4-h3">Maintenance</h3>
                         <p data-i18n="svc4-p">Regular maintenance is key to extending the life of your vehicle. We offer oil changes, tire rotations, brake service, and other routine maintenance tasks to keep your car running smoothly.</p>
                         <a href="maintenance-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
                     </li>
                     <li>
-                        <img src="Images/20240429_140602.jpg" alt="Technician servicing an engine" class="service-img" loading="lazy">
+                        <img src="assets/images/work/20240429_140602.jpg" alt="Technician servicing an engine" class="service-img" loading="lazy">
                         <h3 data-i18n="svc5-h3">Engine Service</h3>
                         <p data-i18n="svc5-p">Our expert mechanics can handle everything from minor tune-ups to more complex engine services, ensuring your engine performs at its best.</p>
                         <a href="engine-repair-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
                     </li>
                     <li>
-                        <img src="Images/service-transmission-fluid.jpg" alt="Transmission fluid drain from underside of vehicle" class="service-img" loading="lazy">
+                        <img src="assets/images/services/service-transmission-fluid.jpg" alt="Transmission fluid drain from underside of vehicle" class="service-img" loading="lazy">
                         <h3 data-i18n="svc6-h3">Transmission Services</h3>
                         <p data-i18n="svc6-p">When it comes to transmissions, we are equipped to handle fluid changes, light repairs, and complete transmission replacements.</p>
                         <a href="transmission-service-smyrna-tn.html" class="make-card-link" data-i18n="svc-learn-more">Learn More &rarr;</a>
@@ -329,7 +331,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <img src="Images/logo-gradient.png" alt="CarTech Automotive LLC – Smyrna, TN auto repair and body shop" class="footer-logo">
+                <img src="assets/images/icons/logo-gradient.png" alt="CarTech Automotive LLC – Smyrna, TN auto repair and body shop" class="footer-logo">
                 <p class="footer-tagline" data-i18n="footer-tagline">Family-owned auto repair &amp; body shop in Smyrna, TN. Built on integrity since 2020.</p>
                 <p class="footer-precision" data-i18n="footer-precision">Precision. Performance. Perfection.</p>
             </div>
@@ -375,6 +377,6 @@
             Text
         </a>
     </div>
-    <script src="lang.js"></script>
+    <script src="assets/js/lang.js"></script>
 </body>
 </html>
