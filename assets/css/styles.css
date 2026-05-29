@@ -74,6 +74,8 @@ header #branding {
     float: left;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 header #branding img {
     width: 375px;
