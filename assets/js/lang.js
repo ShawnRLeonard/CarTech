@@ -229,6 +229,10 @@
         document.querySelectorAll('.lang-label').forEach(function (lbl) {
             lbl.textContent = lang === 'es' ? 'Click for English' : 'Haz clic para Español';
         });
+        // Inicio always points to the Spanish homepage when in ES mode
+        document.querySelectorAll('a[data-i18n="nav-home"]').forEach(function (el) {
+            el.href = lang === 'es' ? 'taller-mecanico-smyrna-tn.html' : 'index.html';
+        });
         try { localStorage.setItem('ct-lang', lang); } catch (e) {}
         document.documentElement.lang = lang === 'es' ? 'es' : 'en';
     }

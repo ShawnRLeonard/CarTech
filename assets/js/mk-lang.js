@@ -166,7 +166,9 @@
         // Header tagline
         setEl('header #branding h1', SHARED.header_tagline);
 
-        // Nav
+        // Nav — home link points to Spanish homepage in ES mode
+        var homeNavLink = find('header nav ul > li:nth-child(1) > a');
+        if (homeNavLink) homeNavLink.href = 'taller-mecanico-smyrna-tn.html';
         setEl('header nav ul > li:nth-child(1) > a', SHARED.nav_home);
         setEl('header nav ul > li:nth-child(2) > a', SHARED.nav_services);
         setEl('header nav ul > li:nth-child(2) .dropdown li:nth-child(1) a', SHARED.nav_paint);
@@ -356,6 +358,8 @@
             applySpanish();
         } else {
             restoreAll();
+            var homeNavLink = find('header nav ul > li:nth-child(1) > a');
+            if (homeNavLink) homeNavLink.href = 'index.html';
             var btn = find('button.lang-toggle');
             if (btn) btn.textContent = 'HAZ CLIC PARA ESPAÑOL';
         }
