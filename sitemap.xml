@@ -9,7 +9,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://cartechsmyrna.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://cartechsmyrna.com/taller-mecanico-smyrna-tn.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cartechsmyrna.com/se-habla-espanol.html"/>
   </url>
 
   <url>
@@ -49,11 +49,11 @@
 
   <!-- ── Spanish Landing Page ── -->
   <url>
-    <loc>https://cartechsmyrna.com/taller-mecanico-smyrna-tn.html</loc>
+    <loc>https://cartechsmyrna.com/se-habla-espanol.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://cartechsmyrna.com/taller-mecanico-smyrna-tn.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cartechsmyrna.com/se-habla-espanol.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://cartechsmyrna.com/"/>
   </url>
 
