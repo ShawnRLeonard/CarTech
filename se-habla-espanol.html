@@ -317,6 +317,31 @@
             border-color: #05b6fc;
             color: #05b6fc;
         }
+        /* ── Reseñas ── */
+        .es-reviews { background: #111111; padding: 70px 0; }
+        .es-reviews h2 { text-align: center; color: #ffffff; font-family: 'Oswald', sans-serif; font-size: clamp(24px, 3vw, 38px); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
+        .es-reviews-summary { display: flex; align-items: center; gap: 20px; background: #1a1a1a; border-radius: 8px; padding: 20px 28px; margin-bottom: 32px; flex-wrap: wrap; }
+        .es-reviews-brand { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; line-height: 1; }
+        .es-reviews-brand .reviews-label { font-size: 17px; color: #aaaaaa; font-weight: 400; margin-left: 6px; font-family: 'Montserrat', sans-serif; }
+        .es-reviews-overall { display: flex; align-items: center; gap: 10px; }
+        .es-reviews-score { font-size: 30px; font-weight: 700; color: #ffffff; font-family: 'Oswald', sans-serif; line-height: 1; }
+        .es-reviews-stars-header { color: #FBBC05; font-size: 22px; letter-spacing: 1px; line-height: 1; }
+        .es-reviews-count { color: #aaaaaa; font-size: 14px; }
+        .es-write-review-btn { margin-left: auto; background: #4285F4; color: #ffffff; padding: 11px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif; transition: background 0.2s; white-space: nowrap; }
+        .es-write-review-btn:hover { background: #3367D6; color: #ffffff; }
+        .es-reviews-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 1000px) { .es-reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+        .es-review-card { background: #1a1a1a; border-radius: 8px; padding: 22px; border-top: 2px solid #2a2a2a; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+        .es-review-card:hover { border-color: #05b6fc; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+        .es-review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .es-review-avatar-wrap { position: relative; flex-shrink: 0; }
+        .es-review-avatar { width: 46px; height: 46px; border-radius: 50%; background: #4285F4; color: #fff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; }
+        .es-review-g-badge { position: absolute; bottom: -2px; right: -4px; background: #fff; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-weight: 900; color: #4285F4; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; line-height: 1; }
+        .es-review-meta { flex: 1; min-width: 0; }
+        .es-review-author { color: #ffffff; font-weight: 600; font-size: 15px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .es-review-stars { color: #FBBC05; font-size: 17px; letter-spacing: 2px; margin-bottom: 10px; }
+        .es-review-text { color: #aaaaaa; font-size: 14px; line-height: 1.75; margin: 0; flex: 1; }
+        @media (max-width: 768px) { .es-reviews-summary { flex-direction: column; align-items: flex-start; gap: 12px; } .es-write-review-btn { margin-left: 0; width: 100%; text-align: center; } }
     </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD0BHVK5JM"></script>
@@ -617,6 +642,97 @@
     <section class="cta-banner">
         <h2>¿Que estas esperando?<br>Llámenos o Envíenos un Mensaje Hoy.</h2>
         <a href="tel:+16152206114" class="cta-banner-btn">Llama Ahora &mdash; 615-220-6114</a>
+    </section>
+
+    <!-- Reseñas en Español -->
+    <section class="es-reviews">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="es-reviews-summary">
+                <div class="es-reviews-brand">
+                    <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span><span class="reviews-label">Reseñas</span>
+                </div>
+                <div class="es-reviews-overall">
+                    <span class="es-reviews-score">4.8</span>
+                    <div class="es-reviews-stars-header">★★★★★</div>
+                    <span class="es-reviews-count">(76 reseñas)</span>
+                </div>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJOSHSrGMNZIgR6MrxD0EQ3_8" target="_blank" rel="noopener" class="es-write-review-btn">⭐ Dejar una Reseña</a>
+            </div>
+            <div class="es-reviews-grid">
+
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">T</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">TOYA BANDA SHOW -OFICIAL</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Son muy amables, súper profesionales en su trabajo. 100% recomendado.</p>
+                </div>
+
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">A</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Angie Villacorta</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Muy buen servicio! recomendado, el joven Shawn muy atento.</p>
+                </div>
+
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">E</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Evelyn Mejía Pacheco</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Excelente servicio. Me encantó, solucionó mi problema de transmisión. Y lo bueno que me pudieron atender en español.</p>
+                </div>
+
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">G</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Gerardo Moreno</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Excelente servicio, arreglaron mi camioneta y quedó como nueva. Trabajo 100% garantizado, la verdad súper recomendable.</p>
+                </div>
+
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">W</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Walter Cornelio</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Precios honestos, una excelente atención, y un trabajo garantizado en inglés y en español. 100% recomendado.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- English version bar -->
