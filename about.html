@@ -172,6 +172,38 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* ── Google Reviews ── */
+        .reviews-section { background: #111111; padding: 70px 0; }
+        .reviews-section h2 { color: #ffffff; margin-bottom: 32px; text-align: center; font-size: clamp(24px, 3vw, 38px); text-transform: uppercase; letter-spacing: 2px; }
+        .reviews-summary { display: flex; align-items: center; gap: 20px; background: #1a1a1a; border-radius: 8px; padding: 20px 28px; margin-bottom: 32px; flex-wrap: wrap; }
+        .reviews-google-brand { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; line-height: 1; }
+        .reviews-google-brand .reviews-label { font-size: 17px; color: #aaaaaa; font-weight: 400; margin-left: 6px; font-family: 'Montserrat', sans-serif; }
+        .g-blue { color: #4285F4; } .g-red { color: #EA4335; } .g-yellow { color: #FBBC05; } .g-green { color: #34A853; }
+        .reviews-overall { display: flex; align-items: center; gap: 10px; }
+        .reviews-score { font-size: 30px; font-weight: 700; color: #ffffff; font-family: 'Oswald', sans-serif; line-height: 1; }
+        .reviews-stars-header { color: #FBBC05; font-size: 22px; letter-spacing: 1px; line-height: 1; }
+        .reviews-count { color: #aaaaaa; font-size: 14px; }
+        .write-review-btn { margin-left: auto; background: #4285F4; color: #ffffff; padding: 11px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif; transition: background 0.2s; white-space: nowrap; }
+        .write-review-btn:hover { background: #3367D6; color: #ffffff; }
+        .reviews-cards { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 1000px) { .reviews-cards { grid-template-columns: repeat(3, 1fr); } }
+        .review-card { background: #1a1a1a; border-radius: 8px; padding: 22px; border-top: 2px solid #2a2a2a; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+        .review-card:hover { border-color: #05b6fc; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+        .review-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .review-avatar-wrap { position: relative; flex-shrink: 0; }
+        .review-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; display: block; }
+        .review-avatar-fallback { width: 46px; height: 46px; border-radius: 50%; background: #4285F4; color: #fff; font-size: 20px; font-weight: 700; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; }
+        .review-g-badge { position: absolute; bottom: -2px; right: -4px; background: #fff; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-weight: 900; color: #4285F4; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; line-height: 1; }
+        .review-meta { flex: 1; min-width: 0; }
+        .review-author { color: #ffffff; font-weight: 600; font-size: 15px; text-decoration: none; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .review-author:hover { color: #05b6fc; }
+        .review-date { color: #555; font-size: 12px; margin-top: 3px; }
+        .review-stars { color: #FBBC05; font-size: 17px; letter-spacing: 2px; margin-bottom: 10px; }
+        .review-text { color: #aaaaaa; font-size: 14px; line-height: 1.75; margin: 0; flex: 1; }
+        .review-read-more { background: none; border: none; color: #05b6fc; font-size: 13px; cursor: pointer; padding: 6px 0 0; font-family: 'Montserrat', sans-serif; text-align: left; }
+        .review-read-more:hover { text-decoration: underline; }
+        .reviews-loading { color: #444; text-align: center; padding: 50px; grid-column: 1 / -1; font-size: 15px; }
+        @media (max-width: 768px) { .reviews-summary { flex-direction: column; align-items: flex-start; gap: 12px; } .write-review-btn { margin-left: 0; width: 100%; text-align: center; } .reviews-cards { grid-template-columns: 1fr; } }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD0BHVK5JM"></script>
     <script>
@@ -284,6 +316,28 @@
         </div>
     </section>
     
+    <section class="reviews-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-summary">
+                <div class="reviews-google-brand">
+                    <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span><span class="reviews-label">Reviews</span>
+                </div>
+                <div class="reviews-overall">
+                    <span class="reviews-score">4.7</span>
+                    <div class="reviews-stars-header">★★★★★</div>
+                    <span class="reviews-count">(61 reviews)</span>
+                </div>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJOSHSrGMNZIgR6MrxD0EQ3_8"
+                   target="_blank" rel="noopener" class="write-review-btn">⭐ Write a Review</a>
+            </div>
+            <div class="reviews-cards" id="reviews-cards">
+                <div class="reviews-loading">Loading reviews…</div>
+            </div>
+        </div>
+    </section>
+    <div id="reviews-map-attr" style="display:none;"></div>
+
     <section class="cta-banner">
         <h2 data-i18n="cta-h2">What Are You Waiting For?<br>Call or Text Us Today.</h2>
         <a href="tel:+16152206114" class="cta-banner-btn" data-i18n="cta-btn">Call Now &mdash; 615-220-6114</a>
@@ -337,6 +391,73 @@
             Text
         </a>
     </div>
+    <script>
+        function initReviews() {
+            var dummy = document.getElementById('reviews-map-attr');
+            if (!dummy || !window.google) return;
+            var service = new google.maps.places.PlacesService(dummy);
+            service.getDetails({
+                placeId: 'ChIJOSHSrGMNZIgR6MrxD0EQ3_8',
+                fields: ['reviews', 'rating', 'user_ratings_total']
+            }, function(place, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
+                    renderReviews(place.reviews, place.rating, place.user_ratings_total);
+                } else {
+                    document.getElementById('reviews-cards').innerHTML =
+                        '<p style="color:#555;text-align:center;padding:40px;grid-column:1/-1">Could not load reviews. <a href="https://search.google.com/local/writereview?placeid=ChIJOSHSrGMNZIgR6MrxD0EQ3_8" target="_blank" style="color:#05b6fc">View on Google</a></p>';
+                }
+            });
+        }
+        function renderReviews(reviews, rating, total) {
+            document.querySelector('.reviews-score').textContent = rating.toFixed(1);
+            document.querySelector('.reviews-count').textContent = '(' + total + ' reviews)';
+            var container = document.getElementById('reviews-cards');
+            container.innerHTML = '';
+            reviews.forEach(function(r) {
+                var stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+                var text = r.text || '';
+                var maxLen = 230;
+                var isTrunc = text.length > maxLen;
+                var uid = 'rv' + Math.random().toString(36).substr(2, 8);
+                var card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML =
+                    '<div class="review-card-header">' +
+                        '<div class="review-avatar-wrap">' +
+                            '<img src="' + r.profile_photo_url + '" alt="' + r.author_name + '" class="review-avatar" ' +
+                                'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+                            '<div class="review-avatar-fallback" style="display:none">' + r.author_name.charAt(0) + '</div>' +
+                            '<div class="review-g-badge">G</div>' +
+                        '</div>' +
+                        '<div class="review-meta">' +
+                            '<a href="' + r.author_url + '" target="_blank" rel="noopener" class="review-author">' + r.author_name + '</a>' +
+                            '<div class="review-date">' + r.relative_time_description + '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="review-stars">' + stars + '</div>' +
+                    '<p class="review-text" id="' + uid + '">' +
+                        (isTrunc ? text.substring(0, maxLen) + '…' : text).replace(/\n/g, '<br>') +
+                    '</p>' +
+                    (isTrunc
+                        ? '<button class="review-read-more" onclick="toggleReview(\'' + uid + '\',\'' +
+                            encodeURIComponent(text) + '\',this)">Read more</button>'
+                        : '');
+                container.appendChild(card);
+            });
+        }
+        function toggleReview(uid, enc, btn) {
+            var p = document.getElementById(uid);
+            var full = decodeURIComponent(enc);
+            if (btn.textContent === 'Read more') {
+                p.innerHTML = full.replace(/\n/g, '<br>');
+                btn.textContent = 'Show less';
+            } else {
+                p.innerHTML = full.substring(0, 230).replace(/\n/g, '<br>') + '…';
+                btn.textContent = 'Read more';
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9a8wEvXRTS_xGSWuHkoWMhdZ146X_OHA&libraries=places&callback=initReviews" async defer></script>
     <script src="assets/js/lang.js"></script>
 </body>
 </html>
