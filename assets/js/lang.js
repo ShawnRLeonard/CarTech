@@ -153,7 +153,7 @@
         'faq-q7':  '&iquest;Qu&eacute; &aacute;reas atienden?',
         'faq-a7':  'Estamos ubicados en Smyrna, TN y atendemos a clientes en todo el Condado de Rutherford y el &aacute;rea del Tennessee Medio &mdash; incluyendo Murfreesboro, La Vergne, Antioch, Nashville, Franklin, Brentwood, Nolensville, Mount Juliet, Hermitage, Christiana, Eagleville, y muchas otras comunidades. <a href="contact.html">Ver la lista completa &rarr;</a>',
         'faq-q8':  '&iquest;C&oacute;mo programo una cita?',
-        'faq-a8':  'Puede <a href="https://booking.shopgenie.io/?shop=cartech-automotive-1812547883&amp;preselect_account=cartech-automotive-llc-1812548070&amp;rwg_token=AFd1xnF4gZf0mW_9ep8v-Wpu4k-BpW-JRBx_VP8Ao8ESG94qCRVwYPsGVlh7xB_k6lYrRKm0aX_1yZD58hpGRh6MDN4SDAT9vQ%3D%3D" target="_blank" rel="noopener">programar en l&iacute;nea las 24 horas aqu&iacute;</a>, <a href="tel:+16152206114">llamarnos o enviarnos un mensaje al 615-220-6114</a>, o pasar en persona durante el horario de atenci&oacute;n en 207 Monroe Street, Smyrna, TN.',
+        'faq-a8':  'Puede <a href="contact.html">enviarnos un mensaje en l&iacute;nea aqu&iacute;</a>, <a href="tel:+16152206114">llamarnos o enviarnos un mensaje al 615-220-6114</a>, o pasar en persona durante el horario de atenci&oacute;n en 207 Monroe Street, Smyrna, TN.',
         'faq-q9':  '&iquest;Cu&aacute;les son sus horarios?',
         'faq-a9':  'Estamos abiertos <strong style="color:#e0e0e0;">de lunes a viernes, de 8:00 AM a 5:00 PM</strong>. Estamos cerrados los s&aacute;bados y domingos.',
         'faq-q10': '&iquest;Garantizan sus reparaciones?',
