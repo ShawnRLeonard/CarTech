@@ -309,8 +309,8 @@
     <section class="form-section">
         <div class="container">
             <div class="form-section-head">
-                <h2 data-i18n="form-h2">Send Us a Message</h2>
-                <p data-i18n="form-sub">Fill out the form and we'll get back to you within one business day. Prefer to talk? <a href="tel:+16152206114" style="color:#05b6fc;">Call or text 615-220-6114.</a></p>
+                <h2 data-i18n="form-h2">Schedule An Appointment</h2>
+                <p data-i18n="form-sub">Fill out the form and we'll get back to you Soon. Prefer to talk? <a href="tel:+16152206114" style="color:#05b6fc;">Call or text 615-220-6114.</a></p>
             </div>
             <div class="form-wrap">
 
@@ -364,6 +364,29 @@
                             <option data-i18n="form-opt-estimate">Free Estimate Only</option>
                             <option data-i18n="form-opt-other">Other / Not Sure</option>
                         </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-pref-day" data-i18n="form-label-pref-day">Preferred Day <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(optional)</span></label>
+                            <select id="cf-pref-day" name="preferred_day">
+                                <option value="" data-i18n="form-pref-none">No preference</option>
+                                <option data-i18n="form-pref-mon">Monday</option>
+                                <option data-i18n="form-pref-tue">Tuesday</option>
+                                <option data-i18n="form-pref-wed">Wednesday</option>
+                                <option data-i18n="form-pref-thu">Thursday</option>
+                                <option data-i18n="form-pref-fri">Friday</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-pref-time" data-i18n="form-label-pref-time">Preferred Time <span style="color:#555; font-size:11px; text-transform:none; letter-spacing:0;">(optional)</span></label>
+                            <select id="cf-pref-time" name="preferred_time">
+                                <option value="" data-i18n="form-pref-none">No preference</option>
+                                <option data-i18n="form-pref-morning">Morning (8 AM – 11 AM)</option>
+                                <option data-i18n="form-pref-afternoon">Afternoon (11 AM – 2 PM)</option>
+                                <option data-i18n="form-pref-late">Late Afternoon (2 PM – 5 PM)</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
