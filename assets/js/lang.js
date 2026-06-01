@@ -69,6 +69,9 @@
         'about-snip-p2':   'En 2024 nos expandimos con una cabina de pintura de &uacute;ltima generaci&oacute;n, incorporando igualaci&oacute;n de color de precisi&oacute;n y reparaci&oacute;n de colisiones completamente en casa. Ya sea un simple cambio de aceite o una reparaci&oacute;n completa de colisi&oacute;n, hacemos el trabajo bien desde la primera vez. Sin suposiciones, sin atajos.',
         'about-snip-link': 'Conoce al Equipo &rarr;',
 
+        'makes-strip-h2':    'Marcas Que Atendemos',
+        'gallery-teaser-h2': 'Vea Nuestro Trabajo de Pintura y Carrocer&iacute;a',
+        'gallery-teaser-btn':'Ver Galer&iacute;a Completa &rarr;',
         'reviews-h2':        'Lo Que Dicen Nuestros Clientes',
         'index-areas-intro': 'Ubicados en 207 Monroe Street en Smyrna, TN, CarTech Automotive atiende con orgullo a clientes en todo el Condado de Rutherford y el &aacute;rea metropolitana de Nashville.',
 

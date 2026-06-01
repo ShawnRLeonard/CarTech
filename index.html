@@ -385,6 +385,23 @@
             .write-review-btn { margin-left: 0; width: 100%; text-align: center; }
             .reviews-cards { grid-template-columns: 1fr; }
         }
+        /* ── Makes strip ── */
+        .makes-strip { background: #0d0d0d; padding: 60px 0; }
+        .makes-strip h2 { text-align: center; color: #ffffff; font-size: clamp(22px, 3vw, 34px); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 28px; }
+        .makes-strip-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .makes-strip-grid a { color: #05b6fc; font-size: 14px; border: 1px solid #333; padding: 8px 18px; border-radius: 20px; text-decoration: none; white-space: nowrap; transition: border-color 0.2s, background 0.2s; }
+        .makes-strip-grid a:hover { border-color: #05b6fc; background: rgba(5,182,252,0.08); }
+        .makes-strip-footer { text-align: center; margin-top: 20px; }
+        .makes-strip-footer a { color: #555; font-size: 13px; text-decoration: none; }
+        .makes-strip-footer a:hover { color: #05b6fc; }
+        /* ── Gallery teaser ── */
+        .gallery-teaser { background: #111111; padding: 60px 0; }
+        .gallery-teaser h2 { text-align: center; color: #ffffff; font-size: clamp(22px, 3vw, 34px); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 28px; }
+        .gallery-teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+        .gallery-teaser-grid a { display: block; overflow: hidden; border-radius: 6px; }
+        .gallery-teaser-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-teaser-grid a:hover img { transform: scale(1.04); }
+        @media (max-width: 600px) { .gallery-teaser-grid { grid-template-columns: 1fr; } }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD0BHVK5JM"></script>
     <script>
@@ -524,6 +541,28 @@
             </div>
         </div>
     </section>
+    <section class="makes-strip">
+        <div class="container">
+            <h2 data-i18n="makes-strip-h2">Makes We Service</h2>
+            <div class="makes-strip-grid">
+                <a href="nissan-repair-smyrna-tn.html">Nissan &amp; Infiniti</a>
+                <a href="toyota-repair-smyrna-tn.html">Toyota &amp; Lexus</a>
+                <a href="ford-lincoln-repair-smyrna-tn.html">Ford &amp; Lincoln</a>
+                <a href="chevrolet-gmc-repair-smyrna-tn.html">Chevrolet &amp; GMC</a>
+                <a href="honda-acura-repair-smyrna-tn.html">Honda &amp; Acura</a>
+                <a href="subaru-repair-smyrna-tn.html">Subaru</a>
+                <a href="jeep-dodge-ram-repair-smyrna-tn.html">Jeep, Dodge &amp; RAM</a>
+                <a href="hyundai-kia-repair-smyrna-tn.html">Hyundai &amp; Kia</a>
+                <a href="bmw-mercedes-repair-smyrna-tn.html">BMW &amp; Mercedes-Benz</a>
+                <a href="volkswagen-audi-repair-smyrna-tn.html">Volkswagen &amp; Audi</a>
+                <a href="mitsubishi-repair-smyrna-tn.html">Mitsubishi</a>
+                <a href="mazda-repair-smyrna-tn.html">Mazda</a>
+            </div>
+            <div class="makes-strip-footer">
+                <a href="Services.html#makes">Don't see your make? We service all vehicles &rarr;</a>
+            </div>
+        </div>
+    </section>
     <section class="about-snippet">
         <div class="container">
             <div class="about-snippet-inner">
@@ -536,6 +575,25 @@
                 <div class="about-snippet-img">
                     <img src="assets/images/shop/shopfront.jpg" alt="CarTech Automotive LLC exterior – auto repair shop at 207 Monroe Street, Smyrna, TN" loading="lazy">
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery-teaser">
+        <div class="container">
+            <h2 data-i18n="gallery-teaser-h2">See Our Paint &amp; Body Work</h2>
+            <div class="gallery-teaser-grid">
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/IMG-20260527-WA0004.jpg" alt="Completed paint job at CarTech Automotive in Smyrna, TN" loading="lazy">
+                </a>
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/IMG-20260527-WA0010.png" alt="Silver Mitsubishi after paint work at CarTech Automotive" loading="lazy">
+                </a>
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/paintmix-closeup.jpg" alt="Paint color mixing at CarTech Automotive body shop in Smyrna, TN" loading="lazy">
+                </a>
+            </div>
+            <div style="text-align:center;">
+                <a href="paint-body-gallery-smyrna-tn.html" class="cta-banner-btn" style="font-size:16px; padding:13px 40px;" data-i18n="gallery-teaser-btn">View Full Gallery &rarr;</a>
             </div>
         </div>
     </section>
