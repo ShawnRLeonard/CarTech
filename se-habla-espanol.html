@@ -317,6 +317,15 @@
             border-color: #05b6fc;
             color: #05b6fc;
         }
+        /* ── Gallery teaser ── */
+        .gallery-teaser { background: #111111; padding: 60px 0; }
+        .gallery-teaser h2 { text-align: center; color: #ffffff; font-family: 'Oswald', 'Impact', sans-serif; font-size: clamp(22px, 3vw, 34px); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 28px; }
+        .gallery-teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+        .gallery-teaser-grid a { display: block; overflow: hidden; border-radius: 6px; }
+        .gallery-teaser-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-teaser-grid a:hover img { transform: scale(1.04); }
+        @media (max-width: 600px) { .gallery-teaser-grid { grid-template-columns: 1fr; } }
+
         /* ── Reseñas ── */
         .es-reviews { background: #111111; padding: 70px 0; }
         .es-reviews h2 { text-align: center; color: #ffffff; font-family: 'Oswald', sans-serif; font-size: clamp(24px, 3vw, 38px); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
@@ -536,6 +545,112 @@
         </div>
     </section>
 
+    <!-- Galería de Pintura y Carrocería -->
+    <section class="gallery-teaser">
+        <div class="container">
+            <h2>Vea Nuestro Trabajo de Pintura y Carrocería</h2>
+            <div class="gallery-teaser-grid">
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/IMG-20260527-WA0004.jpg" alt="Trabajo de pintura completado en CarTech Automotive, Smyrna TN" loading="lazy">
+                </a>
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/IMG-20260527-WA0010.png" alt="Mitsubishi plateado después de pintura en CarTech Automotive" loading="lazy">
+                </a>
+                <a href="paint-body-gallery-smyrna-tn.html">
+                    <img src="assets/images/work/paintmix-closeup.jpg" alt="Mezcla de pintura en CarTech Automotive, Smyrna TN" loading="lazy">
+                </a>
+            </div>
+            <div style="text-align:center;">
+                <a href="paint-body-gallery-smyrna-tn.html" class="cta-banner-btn" style="font-size:16px; padding:13px 40px;">Ver Galería Completa &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas en Español -->
+    <section class="es-reviews">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="es-reviews-summary">
+                <div class="es-reviews-brand">
+                    <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span><span class="reviews-label">Reseñas</span>
+                </div>
+                <div class="es-reviews-overall">
+                    <span class="es-reviews-score">4.8</span>
+                    <div class="es-reviews-stars-header">★★★★★</div>
+                    <span class="es-reviews-count">(76 reseñas)</span>
+                </div>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJOSHSrGMNZIgR6MrxD0EQ3_8" target="_blank" rel="noopener" class="es-write-review-btn">⭐ Dejar una Reseña</a>
+            </div>
+            <div class="es-reviews-grid">
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">T</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">TOYA BANDA SHOW -OFICIAL</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Son muy amables, súper profesionales en su trabajo. 100% recomendado.</p>
+                </div>
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">A</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Angie Villacorta</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Muy buen servicio! recomendado, el joven Shawn muy atento.</p>
+                </div>
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">E</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Evelyn Mejía Pacheco</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Excelente servicio. Me encantó, solucionó mi problema de transmisión. Y lo bueno que me pudieron atender en español.</p>
+                </div>
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">G</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Gerardo Moreno</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Excelente servicio, arreglaron mi camioneta y quedó como nueva. Trabajo 100% garantizado, la verdad súper recomendable.</p>
+                </div>
+                <div class="es-review-card">
+                    <div class="es-review-header">
+                        <div class="es-review-avatar-wrap">
+                            <div class="es-review-avatar">W</div>
+                            <div class="es-review-g-badge">G</div>
+                        </div>
+                        <div class="es-review-meta">
+                            <span class="es-review-author">Walter Cornelio</span>
+                        </div>
+                    </div>
+                    <div class="es-review-stars">★★★★★</div>
+                    <p class="es-review-text">Precios honestos, una excelente atención, y un trabajo garantizado en inglés y en español. 100% recomendado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Formulario de Contacto -->
     <!-- SETUP: Same Formspree ID as contact.html — replace YOUR_FORM_ID -->
     <section class="form-section">
@@ -644,97 +759,6 @@
         <a href="tel:+16152206114" class="cta-banner-btn">Llama Ahora &mdash; 615-220-6114</a>
     </section>
 
-    <!-- Reseñas en Español -->
-    <section class="es-reviews">
-        <div class="container">
-            <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <div class="es-reviews-summary">
-                <div class="es-reviews-brand">
-                    <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span><span class="reviews-label">Reseñas</span>
-                </div>
-                <div class="es-reviews-overall">
-                    <span class="es-reviews-score">4.8</span>
-                    <div class="es-reviews-stars-header">★★★★★</div>
-                    <span class="es-reviews-count">(76 reseñas)</span>
-                </div>
-                <a href="https://search.google.com/local/writereview?placeid=ChIJOSHSrGMNZIgR6MrxD0EQ3_8" target="_blank" rel="noopener" class="es-write-review-btn">⭐ Dejar una Reseña</a>
-            </div>
-            <div class="es-reviews-grid">
-
-                <div class="es-review-card">
-                    <div class="es-review-header">
-                        <div class="es-review-avatar-wrap">
-                            <div class="es-review-avatar">T</div>
-                            <div class="es-review-g-badge">G</div>
-                        </div>
-                        <div class="es-review-meta">
-                            <span class="es-review-author">TOYA BANDA SHOW -OFICIAL</span>
-                        </div>
-                    </div>
-                    <div class="es-review-stars">★★★★★</div>
-                    <p class="es-review-text">Son muy amables, súper profesionales en su trabajo. 100% recomendado.</p>
-                </div>
-
-                <div class="es-review-card">
-                    <div class="es-review-header">
-                        <div class="es-review-avatar-wrap">
-                            <div class="es-review-avatar">A</div>
-                            <div class="es-review-g-badge">G</div>
-                        </div>
-                        <div class="es-review-meta">
-                            <span class="es-review-author">Angie Villacorta</span>
-                        </div>
-                    </div>
-                    <div class="es-review-stars">★★★★★</div>
-                    <p class="es-review-text">Muy buen servicio! recomendado, el joven Shawn muy atento.</p>
-                </div>
-
-                <div class="es-review-card">
-                    <div class="es-review-header">
-                        <div class="es-review-avatar-wrap">
-                            <div class="es-review-avatar">E</div>
-                            <div class="es-review-g-badge">G</div>
-                        </div>
-                        <div class="es-review-meta">
-                            <span class="es-review-author">Evelyn Mejía Pacheco</span>
-                        </div>
-                    </div>
-                    <div class="es-review-stars">★★★★★</div>
-                    <p class="es-review-text">Excelente servicio. Me encantó, solucionó mi problema de transmisión. Y lo bueno que me pudieron atender en español.</p>
-                </div>
-
-                <div class="es-review-card">
-                    <div class="es-review-header">
-                        <div class="es-review-avatar-wrap">
-                            <div class="es-review-avatar">G</div>
-                            <div class="es-review-g-badge">G</div>
-                        </div>
-                        <div class="es-review-meta">
-                            <span class="es-review-author">Gerardo Moreno</span>
-                        </div>
-                    </div>
-                    <div class="es-review-stars">★★★★★</div>
-                    <p class="es-review-text">Excelente servicio, arreglaron mi camioneta y quedó como nueva. Trabajo 100% garantizado, la verdad súper recomendable.</p>
-                </div>
-
-                <div class="es-review-card">
-                    <div class="es-review-header">
-                        <div class="es-review-avatar-wrap">
-                            <div class="es-review-avatar">W</div>
-                            <div class="es-review-g-badge">G</div>
-                        </div>
-                        <div class="es-review-meta">
-                            <span class="es-review-author">Walter Cornelio</span>
-                        </div>
-                    </div>
-                    <div class="es-review-stars">★★★★★</div>
-                    <p class="es-review-text">Precios honestos, una excelente atención, y un trabajo garantizado en inglés y en español. 100% recomendado.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- English version bar -->
     <div class="en-version-bar">
         <p>¿Prefiere ver el sitio en inglés?</p>
@@ -761,7 +785,7 @@
             </div>
             <div class="footer-col">
                 <h4>Nuestro Sitio</h4>
-                <a href="se-habla-espanol.html">Inicio</a
+                <a href="se-habla-espanol.html">Inicio</a>
                 <a href="Services.html">Servicios</a>
                 <a href="about.html">Nosotros</a>
                 <a href="contact.html">Contacto</a>
