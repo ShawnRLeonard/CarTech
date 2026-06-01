@@ -338,8 +338,7 @@
         .es-reviews-count { color: #aaaaaa; font-size: 14px; }
         .es-write-review-btn { margin-left: auto; background: #4285F4; color: #ffffff; padding: 11px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif; transition: background 0.2s; white-space: nowrap; }
         .es-write-review-btn:hover { background: #3367D6; color: #ffffff; }
-        .es-reviews-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        @media (min-width: 1000px) { .es-reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+        .es-reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .es-review-card { background: #1a1a1a; border-radius: 8px; padding: 22px; border-top: 2px solid #2a2a2a; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
         .es-review-card:hover { border-color: #05b6fc; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
         .es-review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
