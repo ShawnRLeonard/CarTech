@@ -87,11 +87,16 @@ header #branding img {
     0%, 100% { filter: brightness(0.75); }
     50%       { filter: brightness(1.2);  }
 }
-header #branding h1 {
+header #branding h1,
+header #branding .branding-title {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     margin-top: -30px;
     height: 160px;
     font-size: 40px;
     color: #ffffff;
+    display: block;
 }
 header .container {
     overflow: visible;
@@ -356,7 +361,8 @@ footer {
         width: 180px;
         height: auto;
     }
-    header #branding h1 {
+    header #branding h1,
+    header #branding .branding-title {
         display: none;
     }
     header nav {

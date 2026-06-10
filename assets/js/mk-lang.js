@@ -164,7 +164,7 @@
     function applySpanish() {
 
         // Header tagline
-        setEl('header #branding h1', SHARED.header_tagline);
+        setEl('header #branding .branding-title', SHARED.header_tagline);
 
         // Nav — home link points to Spanish homepage in ES mode
         var homeNavLink = find('header nav ul > li:nth-child(1) > a');
