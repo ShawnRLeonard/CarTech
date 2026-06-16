@@ -5,6 +5,16 @@ Update this file at the end of each session so the next tool knows what happened
 
 ---
 
+## 2026-06-16 — Gemini (Gemini 3.5 Flash)
+
+**What was done:**
+- Pulled latest changes from remote (commits `949a517`, `d1d263f`, `3ca649f`) containing breadcrumb JSON-LD schema, updated SEO reports, and AI work log.
+- Removed the redundant hero section from `contact.html` (which duplicate-promoted the scheduling button and had "Contact Us" header) to improve UX and decrease page vertical scrolling.
+- Promoted the scheduling form's `<h2>` heading to a single `<h1>` tag in `contact.html` to maintain proper SEO heading hierarchy.
+- Updated `assets/css/styles.css` to style `.form-section-head h1` identical to `.form-section-head h2`.
+
+---
+
 ## 2026-06-12 — Claude (claude-sonnet-4-6)
 
 **What was done:**

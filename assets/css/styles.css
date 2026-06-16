@@ -745,6 +745,7 @@ footer {
     text-align: center;
     margin-bottom: 44px;
 }
+.form-section-head h1,
 .form-section-head h2 {
     font-family: 'Oswald', 'Impact', sans-serif;
     font-size: clamp(24px, 3vw, 36px);
